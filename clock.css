@@ -8,18 +8,42 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   background-color: wheat;
 }
+.triangle{
+  width: 0;
+  height: 0;
+  border-left: 320px solid transparent;
+  border-right: 320px solid transparent;
+  border-bottom: 500px solid green;
+  display: flex;
+  position: relative;
+  margin-top: 33px;
+  z-index: -1;
+}
+.box{
+  width: 100px;
+  height: 200px;
+  background-color: brown;
+  display: flex;
+}
 .clock {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: url(clock.png);
   background-size: cover;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  position: absolute;
+  background-color: white;
 }
+
 .clock::before {
   content: "";
   position: absolute;
@@ -39,17 +63,17 @@ body {
 .hour,
 .hr {
   width: 130px;
-  height: 130px;
+  height: 100px;
 }
 .min,
 .mn {
   width: 190px;
-  height: 190px;
+  height: 160px;
 }
 .sec,
 .sc {
   width: 230px;
-  height: 230px;
+  height: 170px;
 }
 
 .hr,
