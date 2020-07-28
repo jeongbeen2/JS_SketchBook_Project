@@ -20,12 +20,15 @@
       </div>
     </div>
     <div class="box"></div>
-    <input class="tree_btn" type="button" value="click here!">
+    <input class="tree_btn" type="button" value="Click Me" onclick="document.querySelector('.box').style.backgroundColor='brown';
+    document.querySelector('.triangle').style.backgroundColor='green'"
+    >
     <script type="text/javascript">
       const deg = 6;
       const hr = document.querySelector("#hr");
       const mn = document.querySelector("#mn");
       const sc = document.querySelector("#sc");
+      const move = document.querySelector(".tree_btn");
       setInterval(() => {
         let day = new Date();
         let hh = day.getHours() * 30;
@@ -35,6 +38,7 @@
         mn.style.transform = `rotateZ(${mm}deg)`;
         sc.style.transform = `rotateZ(${ss}deg)`;
       });
+      
     </script>
   </body>
 </html>
