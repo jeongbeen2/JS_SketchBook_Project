@@ -7,9 +7,10 @@ Sketchbook on Vanilla JS
 - [x] Clock
 - [x] Music
 - [x] Tree
+- [ ] Header navi-bar
+- [ ] Music Play List
 - [ ] To Do List
 - [ ] Weather
-- [ ] To Do List
 - [ ] Daily Photo
 - [ ] Offline Support
 

@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="header">
+        <ui class="menu">
+          <input 
+          class="menu__btn what" 
+          type="button" 
+          value="What's GooC?">
+          <input 
+          class="menu__btn members" 
+          type="button" 
+          value="Members" 
+          onclick="menu__btn()">
+          <input 
+          class="menu__btn career" 
+          type="button" 
+          value="Career">
+        </ui>
+      </div>
+    </header>
+    <div class="member__box">
+      <img id="member__img" src="css/img/dh.jpg">
+      <img id="member__img" src="css/img/jb.jpg">
+      <img id="member__img" src="css/img/ys.jpg">
+    </div>
     <section>
       <img src="css/img/1.png" data-speed="-7" class="layer" />
       <img src="css/img/2.png" data-speed="-4" class="layer" />
@@ -63,5 +86,6 @@
     <script src="js/sb_audio.js"></script>
     <script src="js/sb_treebtn.js"></script>
     <script src="js/sb_layer.js"></script>
+    <script src="js/sb_menu.js"></script>
   </body>
 </html>
