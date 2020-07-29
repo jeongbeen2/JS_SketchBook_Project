@@ -56,3 +56,4 @@ document.querySelector('#volume').addEventListener('click', function() {
   }
   mute++;
 })
+
