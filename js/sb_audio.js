@@ -42,10 +42,11 @@ document.querySelector('#volume-down').addEventListener('click', function() {
 let count = 1;
 document.querySelector('#volume').addEventListener('click', function() {
   if (count % 2 == '1') {
-    document.getElementById("vol").src="css/img/vol2.png";
-  } else if (count % 2 == '0') {
     document.getElementById("vol").src="css/img/mute2.png";
     audioFile.volume = 0;
+  } else if (count % 2 == '0') {
+    document.getElementById("vol").src="css/img/vol2.png";
+    audioFile.volume = 0.5;
   }
   count++;
 })
