@@ -12,7 +12,8 @@ body {
   min-height: 100vh;
   background-color: black;
 }
-.triangle {
+
+.triangle.active {
   width: 0;
   height: 0;
   border-left: 320px solid black;
@@ -22,13 +23,16 @@ body {
   position: relative;
   margin-top: 60px;
   z-index: -1;
+  background-color: green;
 }
-.box {
+
+.box.active {
   width: 100px;
   height: 200px;
-  background-color: black;
   display: flex;
+  background-color: brown;
 }
+
 .clock {
   width: 250px;
   height: 250px;

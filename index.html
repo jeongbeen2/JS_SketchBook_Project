@@ -34,14 +34,16 @@
         <div class="sc" id="sc"></div>
       </div>
     </div>
+
     <div class="box"></div>
-    <input
+    <!-- <input
       class="tree_btn"
       type="button"
       value="Click Me"
       onclick="document.querySelector('.box').style.backgroundColor='brown';
     document.querySelector('.triangle').style.backgroundColor='green'"
-    />
+    /> -->
+    <input class="tree_btn" type="button" value="Click Me">
     <script src="sb_clock.js"></script>
     <script type="text/javascript">
       document.addEventListener("mousemove", parallax);
@@ -55,6 +57,11 @@
           layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
         });
       }
+
+      document.querySelector('.tree_btn').addEventListener('click', function() {
+        document.querySelector('.triangle').classList.toggle('active')
+        document.querySelector('.box').classList.toggle('active')
+      })
     </script>
   </body>
 </html>
