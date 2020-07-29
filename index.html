@@ -4,23 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="sb_clock.css" />
-    <link rel="stylesheet" href="sb_layer.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section>
-      <img src="img/1.png" data-speed="-7" class="layer" />
-      <img src="img/2.png" data-speed="-4" class="layer" />
-      <img src="img/3.png" data-speed="2" class="layer" />
-      <img src="img/4.png" data-speed="7" class="layer" />
-      <img src="img/5.png" data-speed="-6" class="layer" />
-      <img src="img/6.png" data-speed="8" class="layer" />
-      <img src="img/7.png" data-speed="4" class="layer" />
-      <img src="img/8.png" data-speed="-2" class="layer" />
-      <img src="img/9.png" data-speed="-5" class="layer" />
-      <img src="img/10.png" data-speed="-4" class="layer" />
-      <img src="img/11.png" data-speed="7" class="layer" />
-      <img src="img/12.png" data-speed="5" class="layer" />
+      <img src="css/img/1.png" data-speed="-7" class="layer" />
+      <img src="css/img/2.png" data-speed="-4" class="layer" />
+      <img src="css/img/3.png" data-speed="2" class="layer" />
+      <img src="css/img/4.png" data-speed="7" class="layer" />
+      <img src="css/img/5.png" data-speed="-6" class="layer" />
+      <img src="css/img/6.png" data-speed="8" class="layer" />
+      <img src="css/img/7.png" data-speed="4" class="layer" />
+      <img src="css/img/8.png" data-speed="-2" class="layer" />
+      <img src="css/img/9.png" data-speed="-5" class="layer" />
+      <img src="css/img/10.png" data-speed="-4" class="layer" />
+      <img src="css/img/11.png" data-speed="7" class="layer" />
+      <img src="css/img/12.png" data-speed="5" class="layer" />
     </section>
     <div class="triangle"></div>
     <div class="clock">
@@ -36,14 +35,16 @@
     </div>
 
     <div class="box"></div>
-    <input class="tree_btn" type="button" value="Click Me">
+    <input class="tree_btn" type="button" value="Click Me" />
     <div class="music">
-      <button id="play-btn">
-      </button>
+      <button id="play-btn"></button>
       <button id="stop-btn">
-        <img id="stop" src="img/stop.png" width="50" height="50">
+        <img id="stop" src="css/img/stop.png" width="50" height="50" />
       </button>
     </div>
-    <script src="sb_clock.js"></script>
+    <script src="js/sb_clock.js"></script>
+    <script src="js/sb_audio.js"></script>
+    <script src="js/sb_treebtn.js"></script>
+    <script src="js/sb_layer.js"></script>
   </body>
 </html>
