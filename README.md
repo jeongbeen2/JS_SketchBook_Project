@@ -4,12 +4,14 @@ Sketchbook on Vanilla JS
 
 ## Features
 
-- [o] Clock
-- [x] To Do List
-- [x] Weather
-- [x] To Do List
-- [x] Daily Photo
-- [x] Offline Support
+- [x] Clock
+- [x] Music
+- [x] Tree
+- [ ] To Do List
+- [ ] Weather
+- [ ] To Do List
+- [ ] Daily Photo
+- [ ] Offline Support
 
 ## Member
 
