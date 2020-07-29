@@ -5,25 +5,6 @@
 }
 
 #play-btn {
-  width: 50px;
-  height: 50px;
-  background-image: url(img/play.png);
-  background-size: 50px 50px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  margin-left: 5px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-#play-btn.pause {
-  width: 50px;
-  height: 50px;
-  background-image: url(img/pause.png);
-  background-size: 50px 50px;
   padding: 0;
   border: none;
   background-color: transparent;
