@@ -48,4 +48,10 @@ document.querySelector('#play-btn').addEventListener('click', function() {
 document.querySelector('#stop-btn').addEventListener('click', function() {
   audioFile.pause();
   audioFile.currentTime = 0;
+  var playBtn = document.getElementById('play-btn');
+  if (playBtn.classList.contains('pause')) {
+    audioFile.pause();
+    audioFile.currentTime = 0;
+    document.querySelector('#play-btn').classList.remove('pause');
+  }
 });
