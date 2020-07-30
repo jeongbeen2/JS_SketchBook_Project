@@ -94,3 +94,13 @@ function muteAll() {
 }
 
 document.querySelector(".coffin__btn").addEventListener("click", playMusic);
+let jja = 1;
+function jjajan() {
+  if (jja % 2 == "1") {
+    document.querySelector('.music').style.display = "flex";
+  } else if (jja % 2 == "0") {
+    document.querySelector('.music').style.display = "none";
+  }
+  jja++;
+}
+document.querySelector(".coffin__btn").addEventListener("click", jjajan);
