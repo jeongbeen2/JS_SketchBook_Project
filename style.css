@@ -2,9 +2,10 @@
 
 @import "css/sb_clock.css";
 @import "css/sb_audio.css";
-@import "css/sb_treebtn.css";
+/* @import "css/sb_treebtn.css"; */
 @import "css/sb_layer.css";
 @import "css/sb_menu.css";
+@import "css/sb_coffin.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap");
 * {
