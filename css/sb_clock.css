@@ -1,86 +1,3 @@
-.clock {
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url(img/clock.png);
-  background-size: cover;
-  border: 5px solid black;
-  border-radius: 50%;
-  display: flex;
-  position: absolute;
-  background-color: whitesmoke;
-}
-
-.clock::before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: gainsboro;
-  border: 2px solid white;
-  z-index: 100000;
-  border-radius: 50%;
-}
-.hour,
-.min,
-.sec {
-  position: absolute;
-}
-
-.hour,
-.hr {
-  width: 130px;
-  height: 160px;
-}
-.min,
-.mn {
-  width: 190px;
-  height: 210px;
-}
-.sec,
-.sc {
-  width: 230px;
-  height: 200px;
-}
-
-.hr,
-.mn,
-.sc {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-}
-.hr::before {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 60px;
-  background-color: black;
-  z-index: 10;
-  border-radius: 6px 6px 0 0;
-}
-.mn::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 90px;
-  background-color: black;
-  z-index: 11;
-  border-radius: 6px 6px 0 0;
-}
-.sc::before {
-  content: "";
-  position: absolute;
-  width: 2px;
-  height: 120px;
-  background-color: black;
-  z-index: 12;
-  border-radius: 6px 6px 0 0;
-}
-
 .hide-clock {
   display: flex;
   justify-content: flex-end;
@@ -97,4 +14,5 @@ h1 {
   padding: 20px;
   color: white;
   font-size: 100px;
+  animation: AnmenuUp 0.3s ease-in-out;
 }
