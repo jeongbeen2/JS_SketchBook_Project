@@ -55,9 +55,9 @@ li {
   margin-top: 20px;
   width: 200px;
   height: 200px;
-  margin: 20px 60px;
 }
 .ico-gooc {
+  margin: 20px 40px;
   transition: transform 0.5s ease-in-out;
 }
 .ico-gooc:hover {
