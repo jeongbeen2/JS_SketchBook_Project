@@ -6,7 +6,9 @@
 @import "css/sb_layer.css";
 @import "css/sb_menu.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&display=swap");
 * {
+  font-family: "Recursive", sans-serif;
   margin: 10px;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  height: 200vh;
   background-color: #101010;
 }
