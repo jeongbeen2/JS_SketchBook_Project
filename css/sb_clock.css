@@ -82,15 +82,15 @@
 }
 
 .hide-clock {
-  display: none;
-}
-
-.js-hide-clock {
   display: flex;
   justify-content: flex-end;
   width: 550px;
   height: 250px;
   padding: 0px 30px;
+}
+
+.js-hide-clock {
+  display: none;
 }
 
 h1 {
