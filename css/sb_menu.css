@@ -21,14 +21,17 @@
   0% {
     color: #101010;
   }
+  50% {
+    color: #101010;
+  }
   100% {
     color: white;
   }
 }
 .menu__btn {
-  color: #101010;
+  color: white;
   font-size: 70px;
-  transition: color 0.4s ease-in-out;
+  transition: color 0.3s ease-in-out;
   outline: inherit;
   cursor: pointer;
   background: none;
@@ -36,13 +39,16 @@
   font-size: 50px;
 }
 .what {
-  animation: AnmenuUp 0.3s ease-in-out 0.4s forwards;
+  animation: AnmenuUp 1s ease-in-out;
 }
 .members {
-  animation: AnmenuUp 0.3s ease-in-out 0.5s forwards;
+  animation: AnmenuUp 1.2s ease-in-out;
 }
 .career {
-  animation: AnmenuUp 0.3s ease-in-out 0.6s forwards;
+  animation: AnmenuUp 1.4s ease-in-out;
+}
+.what :hover {
+  color: rgb(253, 186, 61);
 }
 
 .menu__btn:hover {
