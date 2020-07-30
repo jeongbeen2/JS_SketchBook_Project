@@ -1,7 +1,5 @@
 let playlist = [];
-playlist[0] = new Audio("audio/christmas.mp3");
-playlist[1] = new Audio("audio/santa.mp3");
-playlist[2] = new Audio("audio/last.mp3");
+playlist[0] = new Audio("audio/gooddie.mp3");
 
 let playBtn = document.getElementById("play-btn");
 
