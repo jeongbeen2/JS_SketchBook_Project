@@ -1,5 +1,8 @@
 let playlist = [];
 playlist[0] = new Audio("audio/gooddie.mp3");
+playlist[1] = new Audio("audio/christmas.mp3");
+playlist[2] = new Audio("audio/santa.mp3");
+playlist[3] = new Audio("audio/last.mp3");
 
 let playBtn = document.getElementById("play-btn");
 
@@ -104,3 +107,32 @@ function jjajan() {
   jja++;
 }
 document.querySelector(".coffin__btn").addEventListener("click", jjajan);
+
+
+document.querySelector("#play-list").addEventListener("click", function() {
+  document.querySelector("#popup").style.display="block";
+  document.querySelector("#close-btn").addEventListener("click", function() {
+    document.querySelector("#popup").style.display="none";
+  })
+});
+
+document.querySelector('#song1').addEventListener("click", function() {
+  stopMusic();
+  idx = 0;
+  playMusic();
+})
+document.querySelector('#song2').addEventListener("click", function() {
+  stopMusic();
+  idx = 1;
+  playMusic();
+})
+document.querySelector('#song3').addEventListener("click", function() {
+  stopMusic();
+  idx = 2;
+  playMusic();
+})
+document.querySelector('#song4').addEventListener("click", function() {
+  stopMusic();
+  idx = 3;
+  playMusic();
+})
