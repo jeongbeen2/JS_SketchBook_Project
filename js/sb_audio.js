@@ -8,11 +8,6 @@ let playBtn = document.getElementById('play-btn');
 
 let songs = playlist.length; 
 let idx = 0;
-if (++idx > songs) { 
-  idx = 0; 
-} else if (Math.abs(--idx) == songs) { 
-  idx = 0; 
-}
 
 // 재생버튼 누르면 일시정지버튼
 let pause = 1;
@@ -43,20 +38,23 @@ document.querySelector('#stop-btn').addEventListener('click', function() {
 
 // 이전곡, 다음곡
 document.querySelector('#previous').addEventListener('click', function() {
-  idx--;
-  if (++idx > songs) { 
-    idx = 0; 
-  } else if (Math.abs(--idx) == songs) { 
-    idx = 0; 
+  playlist[idx].pause();
+  playlist[idx].currentTime = 0;
+  --idx;
+  if (idx < 0) {
+    idx = songs - 1;
   }
+  playlist[idx].play();
 });
+
 document.querySelector('#next').addEventListener('click', function() {
-  idx++;
-  if (++idx > songs) { 
-    idx = 0; 
-  } else if (Math.abs(--idx) == songs) { 
+  playlist[idx].pause();
+  playlist[idx].currentTime = 0;
+  ++idx;
+  if (idx >= songs) { 
     idx = 0; 
   }
+  playlist[idx].play();
 });
 
 
