@@ -47,6 +47,9 @@
 .career {
   animation: AnmenuUp 1.4s ease-in-out;
 }
+
+
+
 .what :hover {
   color: rgb(253, 186, 61);
 }
@@ -55,23 +58,55 @@
   color: rgb(253, 186, 61);
 }
 
+.member__box {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  top: 280px;
+  z-index: -1;
+  width: 50%;
+}
+
 .member__img {
   width: 200px;
   height: 200px;
   border-radius: 10px;
 }
 
-.member__box {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0;
-  position: fixed;
-  top: 280px;
-  z-index: -1;
-  width: 70%;
+
+
+.showing1{
+  animation: showing 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.showing2{
+  animation: showing 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.showing3{
+  animation: showing 4.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.member__box__box {
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.member__box__box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member__box__box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member__box__box3 {
   display: flex;
   flex-direction: column;
   align-items: center;

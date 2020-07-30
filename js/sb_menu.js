@@ -2,7 +2,12 @@
 
 document.querySelector(".members").addEventListener("click", function () {
   document.querySelector(".member__box").classList.toggle("active");
+  document.querySelector(".member__box__box1").classList.toggle("showing1");
+  document.querySelector(".member__box__box2").classList.toggle("showing2");
+  document.querySelector(".member__box__box3").classList.toggle("showing3");
 });
+
+
 
 /* WIP!!!!!!!! */
 function btnCross() {
@@ -15,3 +20,4 @@ function btnCross() {
   document.querySelector(".ico-md-2").classList.toggle("js-ico-md");
   document.querySelector(".titleName").classList.toggle("js-titleName");
 }
+
