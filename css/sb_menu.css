@@ -80,7 +80,7 @@ li {
   stroke: white;
   stroke-width: 3px;
   transform: translateX(0) translateY(0) rotate(0);
-  transition: all 0.4 ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .changes-top {
