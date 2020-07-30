@@ -1,6 +1,6 @@
 .clock {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,17 +32,17 @@
 .hour,
 .hr {
   width: 130px;
-  height: 100px;
+  height: 160px;
 }
 .min,
 .mn {
   width: 190px;
-  height: 160px;
+  height: 210px;
 }
 .sec,
 .sc {
   width: 230px;
-  height: 170px;
+  height: 200px;
 }
 
 .hr,
