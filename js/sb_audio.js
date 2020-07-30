@@ -100,3 +100,4 @@ function muteAll() {
   mute++;
 }
 
+document.querySelector('.tree_btn').addEventListener('click', playMusic);

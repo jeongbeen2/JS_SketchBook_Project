@@ -1,8 +1,8 @@
 .triangle.active {
   width: 0;
   height: 0;
-  border-left: 320px solid black;
-  border-right: 320px solid black;
+  border-left: 320px solid #101010;
+  border-right: 320px solid #101010;
   border-bottom: 500px solid transparent;
   display: flex;
   position: relative;
@@ -23,4 +23,5 @@
   height: 50px;
   font-size: 30px;
   margin-top: 10px;
+  z-index: 1;
 }
