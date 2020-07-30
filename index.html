@@ -8,7 +8,18 @@
   </head>
   <body>
     <header class="header">
-      <a class="ico-gooc" href="#"><span class="ico-gooc"><img src="css/svg/dolphin.svg" alt=""><img src="css/svg/chainsaw.svg" alt=""></span></a>
+
+       <a class="ico-gooc" href="#">
+          <span class="ico-gooc">
+            <img src="css/svg/dolphin.svg" alt="">
+            <img src="css/svg/chainsaw.svg" alt="">
+         </span></a>
+
+         <svg class="xbox" onclick="btnCross()">
+          <line id="mtop" x1="0" x2="60" y1="1" y2="1" class="xbox__rect"></line>
+          <line id="mbot" x1="60" x2="0" y1="13" y2="13" class="xbox__rect"></line>
+        </svg>
+
         <ui class="menu">
           <input 
           class="menu__btn what" 
@@ -87,5 +98,6 @@
     <script src="js/sb_treebtn.js"></script>
 <!--     <script src="js/sb_layer.js"></script> -->
     <script src="js/sb_menu.js"></script>
+    
   </body>
 </html>

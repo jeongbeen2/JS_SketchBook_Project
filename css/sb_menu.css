@@ -53,8 +53,8 @@ li {
 
 .ico-gooc img {
   margin-top: 20px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 .ico-gooc {
   margin: 20px 40px;
@@ -62,4 +62,31 @@ li {
 }
 .ico-gooc:hover {
   transform: translateY(-10px);
+}
+.xbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+  overflow: visible;
+}
+.xbox-click {
+  width: 65px;
+  height: 65px;
+}
+.xbox__rect {
+  stroke: white;
+  stroke-width: 3px;
+  transform: translateX(0) translateY(0) rotate(0);
+  transition: all 0.4 ease-in-out;
+}
+
+.changes-top {
+  transform: translateX(60px) translateY(0) rotate(135deg);
+}
+
+.changes-bot {
+  transform: translateY(-10px) translateX(25px) rotate(45deg);
 }
