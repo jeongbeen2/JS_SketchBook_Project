@@ -11,4 +11,7 @@ function btnCross() {
   document.querySelector(".xbox").classList.toggle("xbox-click");
   document.querySelector(".menu").classList.toggle("js-menu");
   document.querySelector(".hide-clock").classList.toggle("js-hide-clock");
+  document.querySelector(".ico-md-1").classList.toggle("js-ico-md");
+  document.querySelector(".ico-md-2").classList.toggle("js-ico-md");
+  document.querySelector(".titleName").classList.toggle("js-titleName");
 }
