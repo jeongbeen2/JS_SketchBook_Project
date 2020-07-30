@@ -87,18 +87,53 @@
   z-index: 100;
 }
 
-.ico-gooc img {
-  margin-top: 20px;
-  width: 100px;
-  height: 100px;
+.ico-md-1,
+.ico-md-2 {
+  width: 130px;
+  height: 130px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.4s;
 }
 .ico-gooc {
   margin: 20px 40px;
+  display: flex;
+  justify-content: center;
   transition: transform 0.5s ease-in-out;
 }
 .ico-gooc:hover {
   transform: translateY(-10px);
 }
+
+.ico-gooc__column {
+  display: flex;
+}
+.js-ico-md {
+  width: 100px;
+  height: 100px;
+  transition-delay: 0.8s;
+}
+
+.titleName {
+  font-family: "Recursive", sans-serif;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  transition: all 0.5s ease-in-out;
+}
+.js-titleName {
+  margin-left: 20px;
+}
+.titleName::after {
+  font-family: "Recursive", sans-serif;
+  content: "Virtual World \A Architects Group";
+  white-space: pre;
+  color: gray;
+  font-size: 15px;
+  margin-left: 5px;
+}
+
 .xbox {
   position: absolute;
   right: 50px;
