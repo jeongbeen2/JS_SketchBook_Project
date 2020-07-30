@@ -1,15 +1,18 @@
-const deg = 6;
-const hr = document.querySelector("#hr");
-const mn = document.querySelector("#mn");
-const sc = document.querySelector("#sc");
-const move = document.querySelector(".tree_btn");
+const clockContainer = document.querySelector(".hide-clock");
+const clockTitle = clockContainer.querySelector("h1");
 
-setInterval(() => {
-  let day = new Date();
-  let hh = day.getHours() * 30;
-  let mm = day.getMinutes() * deg;
-  let ss = day.getSeconds() * deg;
-  hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
-  mn.style.transform = `rotateZ(${mm}deg)`;
-  sc.style.transform = `rotateZ(${ss}deg)`;
-});
+function getTime() {
+  const date = new Date();
+  const minutes = date.getMinutes();
+  const hours = date.getHours();
+  const seconds = date.getSeconds();
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours}:${
+    minutes < 10 ? `0${minutes}` : minutes
+  }`;
+}
+
+function init() {
+  getTime();
+  setInterval(getTime, 1000);
+}
+init();
