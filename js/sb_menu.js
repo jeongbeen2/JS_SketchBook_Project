@@ -2,15 +2,23 @@
 
 
 /* MEMBER BOX EFFECT */
-document.querySelector(".members").addEventListener("click", function () {
-  document.querySelector(".member__box").classList.toggle("active");
-  document.querySelector(".member__box__box1").classList.toggle("showing1");
-  document.querySelector(".member__box__box2").classList.toggle("showing2");
-  document.querySelector(".member__box__box3").classList.toggle("showing3");
-
-});
-
-
+let mem = 1;
+document.querySelector(".members").addEventListener("click", memberImage);
+function memberImage() {
+  if (mem % 2 == "0") {
+    document.querySelector(".member__box").classList.add("active");
+    document.querySelector(".member__box__box1").classList.add("showing1");
+    document.querySelector(".member__box__box2").classList.add("showing2");
+    document.querySelector(".member__box__box3").classList.add("showing3");
+  } else if (mem % 2 == "1") {
+    document.querySelector(".member__box").classList.remove("active");
+    document.querySelector(".member__box__box1").classList.remove("showing1");
+    document.querySelector(".member__box__box2").classList.remove("showing2");
+    document.querySelector(".member__box__box3").classList.remove("showing3");
+  }
+  mem++;
+}
+document.querySelector(".xbox").addEventListener("click", memberImage);
 /* WHAT BOX EFFECT */ /* WIPWIPWIPWIPWIPWIPWIPWIPWIPWIPWIP */
 document.querySelector(".what").addEventListener("click", function(){
   document.querySelector(".ico-gooc__column").classList.toggle("move");

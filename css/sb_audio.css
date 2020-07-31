@@ -155,34 +155,7 @@
   padding: 20px;
 }
 
-#popup-container #song1 {
-  display: block;
-  font-size: 20px;
-  color: #797979;
-  margin-bottom: 20px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-#popup-container #song2 {
-  display: block;
-  font-size: 20px;
-  color: #797979;
-  margin-bottom: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-}
-#popup-container #song3 {
-  display: block;
-  font-size: 20px;
-  color: #797979;
-  margin-bottom: 20px;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
-}
-#popup-container #song4 {
+#popup-container .song {
   display: block;
   font-size: 20px;
   color: #797979;
