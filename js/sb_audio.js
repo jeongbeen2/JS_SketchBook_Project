@@ -16,17 +16,18 @@ let idx = 0;
 let pause = 1;
 document.querySelector("#play").addEventListener("click", playMusic);
 function playMusic() {
-  if (pause % 2 == "1") {
+  if (pause == "1") {
     document.getElementById("play").src = "css/img/pause.png";
     playlist[idx].play();
     playlist[idx].addEventListener("ended", function () {
       nextSong();
     });
-  } else if (pause % 2 == "0") {
+    pause = 0;
+  } else if (pause == "0") {
     document.getElementById("play").src = "css/img/play.png";
     playlist[idx].pause();
+    pause = 1;
   }
-  pause++;
 }
 
 // 정지버튼
@@ -35,7 +36,7 @@ function stopMusic() {
   playlist[idx].pause();
   playlist[idx].currentTime = 0;
   document.getElementById("play").src = "css/img/play.png";
-  pause++;
+  pause = 1;
 }
 
 // 이전곡, 다음곡
@@ -70,6 +71,7 @@ function volUp() {
     playlist[idx].volume = 1.0;
   } else {
     playlist[idx].volume += 0.1;
+    mute = 0;
     document.getElementById("vol").src = "css/img/vol2.png";
   }
 }
@@ -79,7 +81,7 @@ function volDown() {
   if (playlist[idx].volume < 0.1) {
     playlist[idx].volume = 0;
     document.getElementById("vol").src = "css/img/mute2.png";
-    mute++;
+    mute = 1;
   } else {
     playlist[idx].volume -= 0.1;
   }
@@ -89,25 +91,36 @@ function volDown() {
 let mute = 1;
 document.querySelector("#volume").addEventListener("click", muteAll);
 function muteAll() {
-  if (mute % 2 == "1") {
+  if (mute == "1") {
     document.getElementById("vol").src = "css/img/mute2.png";
     playlist[idx].volume = 0;
-  } else if (mute % 2 == "0") {
+    mute = 0;
+  } else if (mute == "0") {
     document.getElementById("vol").src = "css/img/vol2.png";
     playlist[idx].volume = 0.5;
+    mute = 1;
   }
-  mute++;
 }
 
-document.querySelector(".coffin__btn").addEventListener("click", playMusic);
+document.querySelector(".coffin__btn").addEventListener("click", function() {
+  if (jja == 1) {
+    pause = 1;
+    playMusic();
+  } else if (jja == 0) {
+    pause = 0;
+    playMusic();
+  }
+});
+
 let jja = 1;
 function jjajan() {
-  if (jja % 2 == "1") {
+  if (jja == "1") {
     document.querySelector('.music').style.display = "flex";
-  } else if (jja % 2 == "0") {
+    jja = 0;
+  } else if (jja == "0") {
     document.querySelector('.music').style.display = "none";
+    jja = 1;
   }
-  jja++;
 }
 document.querySelector(".coffin__btn").addEventListener("click", jjajan);
 
@@ -119,22 +132,27 @@ document.querySelector("#play-list").addEventListener("click", function() {
   })
 });
 
-document.querySelector('#song1').addEventListener("click", function() {
+document.querySelector('#song1').addEventListener("dblclick", function() {
   stopMusic();
   idx = 0;
   playMusic();
-})
-document.querySelector('#song2').addEventListener("click", function() {
+});
+document.querySelector('#song1').addEventListener("click", function() {
+  document.querySelector('#song1').style.backgroundColor="blue";
+});
+
+
+document.querySelector('#song2').addEventListener("dblclick", function() {
   stopMusic();
   idx = 1;
   playMusic();
 })
-document.querySelector('#song3').addEventListener("click", function() {
+document.querySelector('#song3').addEventListener("dblclick", function() {
   stopMusic();
   idx = 2;
   playMusic();
 })
-document.querySelector('#song4').addEventListener("click", function() {
+document.querySelector('#song4').addEventListener("dblclick", function() {
   stopMusic();
   idx = 3;
   playMusic();
