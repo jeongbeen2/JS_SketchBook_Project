@@ -13,17 +13,7 @@ function memberImage() {
   }
   mem++;
 }
-document
-  .querySelector(".xbox")
-  .addEventListener(
-    "click",
-    memberImage
-  ); /* WIPWIPWIPWIPWIPWIPWIPWIPWIPWIPWIP */
-/* WHAT BOX EFFECT */ document
-  .querySelector(".what")
-  .addEventListener("click", function () {
-    document.querySelector(".ico-gooc__column").classList.toggle("move");
-  });
+document.querySelector(".xbox").addEventListener("click", memberImage);
 
 /* WIP!!!!!!!! */
 function btnCross() {
