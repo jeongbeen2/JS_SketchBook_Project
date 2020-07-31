@@ -1,13 +1,20 @@
 "use strict";
 
+
+/* MEMBER BOX EFFECT */
 document.querySelector(".members").addEventListener("click", function () {
   document.querySelector(".member__box").classList.toggle("active");
   document.querySelector(".member__box__box1").classList.toggle("showing1");
   document.querySelector(".member__box__box2").classList.toggle("showing2");
   document.querySelector(".member__box__box3").classList.toggle("showing3");
+
 });
 
 
+/* WHAT BOX EFFECT */ /* WIPWIPWIPWIPWIPWIPWIPWIPWIPWIPWIP */
+document.querySelector(".what").addEventListener("click", function(){
+  document.querySelector(".ico-gooc__column").classList.toggle("move");
+});
 
 /* WIP!!!!!!!! */
 function btnCross() {

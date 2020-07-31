@@ -1,3 +1,6 @@
+"use strict";
+
+
 const clockContainer = document.querySelector(".hide-clock");
 const clockTitle = clockContainer.querySelector("h1");
 

@@ -1,3 +1,6 @@
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* @@@@@@@@@@@@@@ HEADER & MENU NAV @@@@@@@@@@@@*/
 .header {
   width: 100%;
   position: fixed;
@@ -58,69 +61,6 @@
   color: rgb(253, 186, 61);
 }
 
-.member__box {
-  display: flex;
-  justify-content: space-between;
-  opacity: 0;
-  top: 280px;
-  z-index: -1;
-  width: 50%;
-}
-
-.member__img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-}
-
-
-
-.showing1{
-  animation: showing 1.5s ease-in-out;
-  animation-fill-mode: forwards;
-}
-.showing2{
-  animation: showing 3s ease-in-out;
-  animation-fill-mode: forwards;
-}
-.showing3{
-  animation: showing 4.5s ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-@keyframes showing {
-  from {
-    opacity: 0;
-  }
-  to{
-    opacity: 1;
-  }
-}
-.member__box__box1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.member__box__box2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.member__box__box3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.member__box__name {
-  margin-top: 20px;
-  color: white;
-  font-size: 30px;
-}
-.member__box.active {
-  opacity: 1;
-  z-index: 100;
-}
 
 .ico-md-1,
 .ico-md-2 {
@@ -198,3 +138,77 @@
 .changes-bot {
   transform: translateY(-10px) translateX(25px) rotate(45deg);
 }
+
+ /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/*@@@@@@@@@@@@@@ MEMBER__BOX & IMAGE @@@@@@@@@@@@@@@@@ */
+.member__box {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  top: 280px;
+  z-index: -1;
+  width: 50%;
+}
+
+.member__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+
+
+.showing1{
+  animation: showing 1.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.showing2{
+  animation: showing 3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.showing3{
+  animation: showing 4.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showing {
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.member__box__box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member__box__box2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member__box__box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member__box__name {
+  color: white;
+  font-size: 30px;
+}
+.name-blank{
+  margin-top: 20px;
+}
+
+.member__box.active {
+  opacity: 1;
+  z-index: 100;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/*@@@@@@@@@@@@@@@@@@@@ WHAT__BOX @@@@@@@@@@@@@@@@@@@@ */
+

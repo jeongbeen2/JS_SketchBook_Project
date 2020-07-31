@@ -1,3 +1,6 @@
+"use strict";
+
+
 let playlist = [];
 playlist[0] = new Audio("audio/gooddie.mp3");
 playlist[1] = new Audio("audio/christmas.mp3");
