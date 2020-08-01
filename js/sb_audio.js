@@ -35,6 +35,7 @@ function playMusic() {
   if (pause == "1") {
     document.getElementById("play").src = "css/img/pause.png";
     playlist[idx].play();
+    playlist[idx].volume = slider.value / 100;
     playlist[idx].addEventListener("ended", function () {
       nextSong();
     });
@@ -65,6 +66,7 @@ function prevSong() {
     idx = songs - 1;
   }
   playlist[idx].play();
+  playlist[idx].volume = slider.value / 100;
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -89,6 +91,7 @@ function nextSong() {
     idx = 0;
   }
   playlist[idx].play();
+  playlist[idx].volume = slider.value / 100;
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -125,7 +128,7 @@ function muteAll() {
   if (mute == "1") {
     document.getElementById("vol").src = "css/img/mute2.png";
     playlist[idx].muted = true;
-    slider.value = 0.01;
+    slider.value = playlist[idx].volume;
     mute = 0;
   } else if (mute == "0") {
     document.getElementById("vol").src = "css/img/vol2.png";
@@ -134,6 +137,7 @@ function muteAll() {
     slider.value = playlist[idx].volume * 100;
   }
 }
+
 
 // Click Me 누르면 play 한번 더누르면 pause
 document.querySelector(".coffin__btn").addEventListener("click", function() {
