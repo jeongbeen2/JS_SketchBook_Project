@@ -12,6 +12,22 @@ let playBtn = document.getElementById("play-btn");
 let songs = playlist.length;
 let idx = 0;
 
+let nowPlay1 = document.getElementById("now-playing1")
+let nowPlay2 = document.getElementById("now-playing2")
+if (idx == 0) {
+  nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+} else if (idx == 1) {
+  nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
+  nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
+} else if (idx == 2) {
+  nowPlay1.innerText="Ariana Grande - Santa Tell Me";
+  nowPlay2.innerText="Ariana Grande - Santa Tell Me";
+} else if (idx == 3) {
+  nowPlay1.innerText="Wham - Last Christmas";
+  nowPlay2.innerText="Wham - Last Christmas";
+}
+
 // 재생버튼 누르면 일시정지버튼
 let pause = 1;
 document.querySelector("#play").addEventListener("click", playMusic);
@@ -49,6 +65,19 @@ function prevSong() {
     idx = songs - 1;
   }
   playlist[idx].play();
+  if (idx == 0) {
+    nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+    nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  } else if (idx == 1) {
+    nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
+    nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
+  } else if (idx == 2) {
+    nowPlay1.innerText="Ariana Grande - Santa Tell Me";
+    nowPlay2.innerText="Ariana Grande - Santa Tell Me";
+  } else if (idx == 3) {
+    nowPlay1.innerText="Wham - Last Christmas";
+    nowPlay2.innerText="Wham - Last Christmas";
+  }
 }
 
 document.querySelector("#next").addEventListener("click", nextSong);
@@ -60,6 +89,20 @@ function nextSong() {
     idx = 0;
   }
   playlist[idx].play();
+  if (idx == 0) {
+    nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+    nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  } else if (idx == 1) {
+    nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
+    nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
+  } else if (idx == 2) {
+    nowPlay1.innerText="Ariana Grande - Santa Tell Me";
+    nowPlay2.innerText="Ariana Grande - Santa Tell Me";
+  } else if (idx == 3) {
+    nowPlay1.innerText="Wham - Last Christmas";
+    nowPlay2.innerText="Wham - Last Christmas";
+  }
+  
 }
 
 // 볼륨조절
@@ -106,7 +149,7 @@ function muteAll() {
 document.querySelector(".coffin__btn").addEventListener("click", function() {
   if (jja == 1) {
     pause = 1;
-    playMusic();
+    playMusic();   
   } else if (jja == 0) {
     pause = 0;
     playMusic();
@@ -142,6 +185,8 @@ document.querySelector('#song1').addEventListener("dblclick", function() {
   stopMusic();
   idx = 0;
   playMusic();
+  nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
 });
 document.querySelector('#song1').addEventListener("click", function() {
   document.querySelector('#song1').style.backgroundColor="#AFEEEE";
@@ -155,6 +200,8 @@ document.querySelector('#song2').addEventListener("dblclick", function() {
   stopMusic();
   idx = 1;
   playMusic();
+  nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
+  nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
 })
 document.querySelector('#song2').addEventListener("click", function() {
   document.querySelector('#song2').style.backgroundColor="#AFEEEE";
@@ -168,6 +215,8 @@ document.querySelector('#song3').addEventListener("dblclick", function() {
   stopMusic();
   idx = 2;
   playMusic();
+  nowPlay1.innerText="Ariana Grande - Santa Tell Me";
+  nowPlay2.innerText="Ariana Grande - Santa Tell Me";
 })
 document.querySelector('#song3').addEventListener("click", function() {
   document.querySelector('#song3').style.backgroundColor="#AFEEEE";
@@ -181,6 +230,8 @@ document.querySelector('#song4').addEventListener("dblclick", function() {
   stopMusic();
   idx = 3;
   playMusic();
+  nowPlay1.innerText="Wham - Last Christmas";
+  nowPlay2.innerText="Wham - Last Christmas";
 })
 document.querySelector('#song4').addEventListener("click", function() {
   document.querySelector('#song4').style.backgroundColor="#AFEEEE";
@@ -188,3 +239,5 @@ document.querySelector('#song4').addEventListener("click", function() {
   document.querySelector('#song2').style.backgroundColor="transparent";
   document.querySelector('#song3').style.backgroundColor="transparent";
 });
+
+
