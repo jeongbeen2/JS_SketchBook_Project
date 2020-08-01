@@ -138,7 +138,10 @@ document.querySelector('#song1').addEventListener("dblclick", function() {
   playMusic();
 });
 document.querySelector('#song1').addEventListener("click", function() {
-  document.querySelector('#song1').style.backgroundColor="blue";
+  document.querySelector('#song1').style.backgroundColor="#AFEEEE";
+  document.querySelector('#song2').style.backgroundColor="transparent";
+  document.querySelector('#song3').style.backgroundColor="transparent";
+  document.querySelector('#song4').style.backgroundColor="transparent";
 });
 
 
@@ -147,13 +150,35 @@ document.querySelector('#song2').addEventListener("dblclick", function() {
   idx = 1;
   playMusic();
 })
+document.querySelector('#song2').addEventListener("click", function() {
+  document.querySelector('#song2').style.backgroundColor="#AFEEEE";
+  document.querySelector('#song1').style.backgroundColor="transparent";
+  document.querySelector('#song3').style.backgroundColor="transparent";
+  document.querySelector('#song4').style.backgroundColor="transparent";
+});
+
+
 document.querySelector('#song3').addEventListener("dblclick", function() {
   stopMusic();
   idx = 2;
   playMusic();
 })
+document.querySelector('#song3').addEventListener("click", function() {
+  document.querySelector('#song3').style.backgroundColor="#AFEEEE";
+  document.querySelector('#song1').style.backgroundColor="transparent";
+  document.querySelector('#song2').style.backgroundColor="transparent";
+  document.querySelector('#song4').style.backgroundColor="transparent";
+});
+
+
 document.querySelector('#song4').addEventListener("dblclick", function() {
   stopMusic();
   idx = 3;
   playMusic();
 })
+document.querySelector('#song4').addEventListener("click", function() {
+  document.querySelector('#song4').style.backgroundColor="#AFEEEE";
+  document.querySelector('#song1').style.backgroundColor="transparent";
+  document.querySelector('#song2').style.backgroundColor="transparent";
+  document.querySelector('#song3').style.backgroundColor="transparent";
+});
