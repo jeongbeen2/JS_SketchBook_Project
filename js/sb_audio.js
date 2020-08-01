@@ -35,7 +35,7 @@ function playMusic() {
   if (pause == "1") {
     document.getElementById("play").src = "css/img/pause.png";
     playlist[idx].play();
-    playlist[idx].volume = slider.value / 100;
+    // playlist[idx].volume = slider.value / 100;
     playlist[idx].addEventListener("ended", function () {
       nextSong();
     });
@@ -44,6 +44,13 @@ function playMusic() {
     document.getElementById("play").src = "css/img/play.png";
     playlist[idx].pause();
     pause = 1;
+  }
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    slider.value = playlist[idx].volume * 100;
   }
 }
 
@@ -54,10 +61,28 @@ function stopMusic() {
   playlist[idx].currentTime = 0;
   document.getElementById("play").src = "css/img/play.png";
   pause = 1;
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    slider.value = playlist[idx].volume * 100;
+  }
 }
 
 // 이전곡
 let ktx = 0;
+function volumeInherit() {  
+  if (playlist[ktx].muted == false) {
+    playlist[idx].muted = false;
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
+  } else if (playlist[ktx].muted == true) {    
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
+    slider.value = playlist[idx].volume;
+  }
+}
 document.querySelector("#previous").addEventListener("click", prevSong);
 function prevSong() {
   playlist[idx].pause();
@@ -74,14 +99,16 @@ function prevSong() {
     ktx = idx + 1;
   }
   playlist[idx].play();
-  if (playlist[ktx].muted == false) {
-    playlist[idx].volume = playlist[ktx].volume;
-    slider.value = playlist[idx].volume * 100;
-  } else if (playlist[ktx].muted == true) {
-    playlist[idx].volume = playlist[ktx].volume;
-    playlist[idx].muted = true;
-    slider.value = playlist[idx].volume;
-  }
+  // if (playlist[ktx].muted == false) {
+  //   playlist[idx].muted = false;
+  //   playlist[idx].volume = playlist[ktx].volume;
+  //   slider.value = playlist[idx].volume * 100;
+  // } else if (playlist[ktx].muted == true) {    
+  //   playlist[idx].volume = playlist[ktx].volume;
+  //   playlist[idx].muted = true;
+  //   slider.value = playlist[idx].volume;
+  // }
+  volumeInherit();
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -114,14 +141,16 @@ function nextSong() {
     ktx = idx - 1;
   }
   playlist[idx].play();
-  if (playlist[ktx].muted == false) {
-    playlist[idx].volume = playlist[ktx].volume;
-    slider.value = playlist[idx].volume * 100;
-  } else if (playlist[ktx].muted == true) {
-    playlist[idx].volume = playlist[ktx].volume;
-    playlist[idx].muted = true;
-    slider.value = playlist[idx].volume;
-  }
+  // if (playlist[ktx].muted == false) {
+  //   playlist[idx].muted = false;
+  //   playlist[idx].volume = playlist[ktx].volume;
+  //   slider.value = playlist[idx].volume * 100;
+  // } else if (playlist[ktx].muted == true) {
+  //   playlist[idx].volume = playlist[ktx].volume;
+  //   playlist[idx].muted = true;
+  //   slider.value = playlist[idx].volume;
+  // }
+  volumeInherit();
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -210,6 +239,13 @@ document.querySelector('#song1').addEventListener("dblclick", function() {
   stopMusic();
   idx = 0;
   playMusic();
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = slider.value / 100;
+  }
   nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
   nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
 });
@@ -225,6 +261,13 @@ document.querySelector('#song2').addEventListener("dblclick", function() {
   stopMusic();
   idx = 1;
   playMusic();
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = slider.value / 100;
+  }
   nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
   nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
 })
@@ -240,6 +283,13 @@ document.querySelector('#song3').addEventListener("dblclick", function() {
   stopMusic();
   idx = 2;
   playMusic();
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = slider.value / 100;
+  }
   nowPlay1.innerText="Ariana Grande - Santa Tell Me";
   nowPlay2.innerText="Ariana Grande - Santa Tell Me";
 })
@@ -255,6 +305,13 @@ document.querySelector('#song4').addEventListener("dblclick", function() {
   stopMusic();
   idx = 3;
   playMusic();
+  if (playlist[idx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = slider.value / 100;
+  }
   nowPlay1.innerText="Wham - Last Christmas";
   nowPlay2.innerText="Wham - Last Christmas";
 })
