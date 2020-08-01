@@ -71,7 +71,7 @@ function volUp() {
     playlist[idx].volume = 1.0;
   } else {
     playlist[idx].volume += 0.1;
-    mute = 0;
+    mute = 1;
     document.getElementById("vol").src = "css/img/vol2.png";
   }
 }
@@ -81,7 +81,7 @@ function volDown() {
   if (playlist[idx].volume < 0.1) {
     playlist[idx].volume = 0;
     document.getElementById("vol").src = "css/img/mute2.png";
-    mute = 1;
+    mute = 0;
   } else {
     playlist[idx].volume -= 0.1;
   }
