@@ -102,6 +102,7 @@ function muteAll() {
   }
 }
 
+// Click Me 누르면 play 한번 더누르면 pause
 document.querySelector(".coffin__btn").addEventListener("click", function() {
   if (jja == 1) {
     pause = 1;
@@ -112,10 +113,12 @@ document.querySelector(".coffin__btn").addEventListener("click", function() {
   }
 });
 
+
+// Click Me 누르면 뮤직플레이어 나타남 한번 더 누르면 사라짐
 let jja = 1;
 function jjajan() {
   if (jja == "1") {
-    document.querySelector('.music').style.display = "flex";
+    document.querySelector('.music').style.display = "inline-flex";
     jja = 0;
   } else if (jja == "0") {
     document.querySelector('.music').style.display = "none";
@@ -125,6 +128,7 @@ function jjajan() {
 document.querySelector(".coffin__btn").addEventListener("click", jjajan);
 
 
+// 플레이 리스트 누르면 popup으로 목록 나옴
 document.querySelector("#play-list").addEventListener("click", function() {
   document.querySelector("#popup").style.display="block";
   document.querySelector("#close-btn").addEventListener("click", function() {
@@ -132,6 +136,8 @@ document.querySelector("#play-list").addEventListener("click", function() {
   })
 });
 
+
+// 더블클릭 누르면 노래 바뀜 그냥 클릭 한번은 선택한 노래 배경색 바뀜
 document.querySelector('#song1').addEventListener("dblclick", function() {
   stopMusic();
   idx = 0;

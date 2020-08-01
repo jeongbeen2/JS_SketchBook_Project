@@ -6,6 +6,7 @@
   margin-bottom: 30px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -175,4 +176,24 @@
   font-size: 16px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.music-flexbox1 {
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-flexbox2 {
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playing {
+  color: white;
 }
