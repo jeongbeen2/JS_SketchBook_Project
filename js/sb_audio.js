@@ -106,29 +106,17 @@ function nextSong() {
 }
 
 // 볼륨조절
-playlist[idx].volume = 0.5;
-document.querySelector("#volume-up").addEventListener("click", volUp);
-function volUp() {
-  if (playlist[idx].volume > 0.9) {
-    alert("볼륨이 최대입니다!");
-    playlist[idx].volume = 1.0;
+
+let slider = document.getElementById("myRange");
+slider.oninput = function() {
+  playlist[idx].volume = this.value / 100;
+  if (playlist[idx].volume <= 0.01) {
+    document.getElementById("vol").src = "css/img/mute2.png";
   } else {
-    playlist[idx].volume += 0.1;
-    mute = 1;
     document.getElementById("vol").src = "css/img/vol2.png";
   }
 }
 
-document.querySelector("#volume-down").addEventListener("click", volDown);
-function volDown() {
-  if (playlist[idx].volume < 0.1) {
-    playlist[idx].volume = 0;
-    document.getElementById("vol").src = "css/img/mute2.png";
-    mute = 0;
-  } else {
-    playlist[idx].volume -= 0.1;
-  }
-}
 
 // 음소거버튼
 let mute = 1;
@@ -136,12 +124,14 @@ document.querySelector("#volume").addEventListener("click", muteAll);
 function muteAll() {
   if (mute == "1") {
     document.getElementById("vol").src = "css/img/mute2.png";
-    playlist[idx].volume = 0;
+    playlist[idx].muted = true;
+    slider.value = 0.01;
     mute = 0;
   } else if (mute == "0") {
     document.getElementById("vol").src = "css/img/vol2.png";
-    playlist[idx].volume = 0.5;
     mute = 1;
+    playlist[idx].muted = false;
+    slider.value = playlist[idx].volume * 100;
   }
 }
 

@@ -104,34 +104,8 @@
   vertical-align: middle;
 }
 
-#volume-up {
-  width: 25px;
+.slider {
   height: 25px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background-color: #414141;
-  color: yellow;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  margin-left: 5px;
-  vertical-align: middle;
-}
-
-#volume-down {
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  border: none;
-  border-radius: 50%;
-  background-color: #414141;
-  color: pink;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
-  margin-right: 5px;
-  vertical-align: middle;
 }
 
 #popup {
