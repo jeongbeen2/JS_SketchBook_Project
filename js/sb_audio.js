@@ -56,17 +56,32 @@ function stopMusic() {
   pause = 1;
 }
 
-// 이전곡, 다음곡
+// 이전곡
+let ktx = 0;
 document.querySelector("#previous").addEventListener("click", prevSong);
 function prevSong() {
   playlist[idx].pause();
   playlist[idx].currentTime = 0;
+  document.getElementById("play").src = "css/img/pause.png";
+  pause = 0;
   --idx;
   if (idx < 0) {
     idx = songs - 1;
   }
+  if (idx >= songs - 1) {
+    ktx = 0;
+  } else {
+    ktx = idx + 1;
+  }
   playlist[idx].play();
-  playlist[idx].volume = slider.value / 100;
+  if (playlist[ktx].muted == false) {
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
+  } else if (playlist[ktx].muted == true) {
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
+    slider.value = playlist[idx].volume;
+  }
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -82,16 +97,31 @@ function prevSong() {
   }
 }
 
+// 다음곡
 document.querySelector("#next").addEventListener("click", nextSong);
 function nextSong() {
   playlist[idx].pause();
   playlist[idx].currentTime = 0;
+  document.getElementById("play").src = "css/img/pause.png";
+  pause = 0;
   ++idx;
   if (idx >= songs) {
     idx = 0;
+  } 
+  if (idx < 1) {
+    ktx = songs - 1;
+  } else {
+    ktx = idx - 1;
   }
   playlist[idx].play();
-  playlist[idx].volume = slider.value / 100;
+  if (playlist[ktx].muted == false) {
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
+  } else if (playlist[ktx].muted == true) {
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
+    slider.value = playlist[idx].volume;
+  }
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -111,7 +141,8 @@ function nextSong() {
 // 볼륨조절
 
 let slider = document.getElementById("myRange");
-slider.oninput = function() {
+slider.oninput = slideVol;
+function slideVol() {
   playlist[idx].volume = this.value / 100;
   if (playlist[idx].volume <= 0.01) {
     document.getElementById("vol").src = "css/img/mute2.png";
