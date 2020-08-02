@@ -13,10 +13,16 @@ document.querySelector(".ico-gooc__column").classList.toggle("move");
 });
 
 let paint = 1;
-document.querySelector(".painting").addEventListener("click", paintDrowing);
 function paintDrowing(){
-  document.querySelector(".canvas__box").classList.toggle("showing");
+  if (paint == "1"){
+    document.querySelector(".canvas__box").style.display = "flex";
+    paint = 0;
+  } else if (paint == "0"){
+    document.querySelector(".canvas__box").style.display = "none";
+    paint = 1;
+  }
 }
+document.querySelector(".painting").addEventListener("click", paintDrowing);
 /* WIP!!!!!!!! */
 let cross = 1;
 function btnCross() {
