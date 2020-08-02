@@ -14,6 +14,7 @@ Sketchbook on Vanilla JS
 - [ ] Daily Photo
 - [ ] Offline Support
 - [ ] Test terminal
+- [x] Test protection
 
 ## Member
 
