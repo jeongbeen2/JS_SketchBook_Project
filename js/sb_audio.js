@@ -237,14 +237,19 @@ document.querySelector("#play-list").addEventListener("click", function() {
 // 더블클릭 누르면 노래 바뀜 그냥 클릭 한번은 선택한 노래 배경색 바뀜
 document.querySelector('#song1').addEventListener("dblclick", function() {
   stopMusic();
+  playlist[ktx].volume = playlist[idx].volume;
+  ktx = idx;
   idx = 0;
   playMusic();
-  if (playlist[idx].muted == true) {
+  if (playlist[ktx].muted == true) {
     document.getElementById("vol").src = "css/img/mute2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
     slider.value = playlist[idx].volume;
   } else if (playlist[idx].muted == false) {
     document.getElementById("vol").src = "css/img/vol2.png";
-    playlist[idx].volume = slider.value / 100;
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
   }
   nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
   nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -259,13 +264,19 @@ document.querySelector('#song1').addEventListener("click", function() {
 
 document.querySelector('#song2').addEventListener("dblclick", function() {
   stopMusic();
+  playlist[ktx].volume = playlist[idx].volume;
+  ktx = idx;
   idx = 1;
   playMusic();
-  if (playlist[idx].muted == true) {
+  if (playlist[ktx].muted == true) {
     document.getElementById("vol").src = "css/img/mute2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
     slider.value = playlist[idx].volume;
   } else if (playlist[idx].muted == false) {
     document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
     playlist[idx].volume = slider.value / 100;
   }
   nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
@@ -281,13 +292,19 @@ document.querySelector('#song2').addEventListener("click", function() {
 
 document.querySelector('#song3').addEventListener("dblclick", function() {
   stopMusic();
+  playlist[ktx].volume = playlist[idx].volume;
+  ktx = idx;
   idx = 2;
   playMusic();
-  if (playlist[idx].muted == true) {
+  if (playlist[ktx].muted == true) {
     document.getElementById("vol").src = "css/img/mute2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
     slider.value = playlist[idx].volume;
   } else if (playlist[idx].muted == false) {
     document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
     playlist[idx].volume = slider.value / 100;
   }
   nowPlay1.innerText="Ariana Grande - Santa Tell Me";
@@ -303,13 +320,19 @@ document.querySelector('#song3').addEventListener("click", function() {
 
 document.querySelector('#song4').addEventListener("dblclick", function() {
   stopMusic();
+  playlist[ktx].volume = playlist[idx].volume;
+  ktx = idx;
   idx = 3;
   playMusic();
-  if (playlist[idx].muted == true) {
+  if (playlist[ktx].muted == true) {
     document.getElementById("vol").src = "css/img/mute2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
     slider.value = playlist[idx].volume;
   } else if (playlist[idx].muted == false) {
     document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
     playlist[idx].volume = slider.value / 100;
   }
   nowPlay1.innerText="Wham - Last Christmas";
