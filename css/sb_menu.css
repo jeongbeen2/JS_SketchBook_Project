@@ -2,6 +2,7 @@
 /* @@@@@@@@@@@@@@ HEADER & MENU NAV @@@@@@@@@@@@*/
 .header {
   width: 100%;
+  height: 360px;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -68,6 +69,71 @@
   transition: all 0.5s ease-in-out;
   transition-delay: 0.4s;
 }
+
+
+/* navibar act */
+.header.change {
+  width: 100%;
+  height: 360px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 20px;
+  margin: 0px;
+  z-index: 1000;
+}
+.ico-md-1.change, .ico-md-2.change {
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.4s;
+  z-index: 1000;
+}
+.ico-gooc.change{
+  height: 30px;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+}
+.xbox.change {
+  margin-top: 20px;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+  overflow: visible;
+  z-index: 1000;
+}
+.titleName.change {
+  font-family: "Recursive", sans-serif;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+.menu__btn.change {
+  color: white;
+  font-size: 70px;
+  transition: color 0.3s ease-in-out;
+  outline: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  z-index: 1000;
+}
+/*  */
+
+
 .ico-gooc {
   margin: 20px 40px;
   display: flex;
@@ -189,3 +255,10 @@
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /*@@@@@@@@@@@@@@@@@@@@ WHAT__BOX @@@@@@@@@@@@@@@@@@@@ */
+
+.contents {
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  display: block;
+}
