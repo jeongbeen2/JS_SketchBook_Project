@@ -49,6 +49,9 @@
 .career {
   animation: AnmenuUp 1.4s ease-in-out;
 }
+.painting {
+  animation: AnmenuUp 1.6s ease-in-out;
+}
 
 .what :hover {
   color: rgb(253, 186, 61);

@@ -7,14 +7,16 @@ function memberImage() {
   document.querySelector(".member__box").classList.toggle("active");
   document.querySelector(".member__box__box").classList.toggle("showing");
 }
-// document.querySelector(".xbox").addEventListener("click",memberImage);
-/* WIPWIPWIPWIPWIPWIPWIPWIPWIPWIPWIP */
-/* WHAT BOX EFFECT */
 
 document.querySelector(".what").addEventListener("click", function () {
-  document.querySelector(".ico-gooc__column").classList.toggle("move");
+document.querySelector(".ico-gooc__column").classList.toggle("move");
 });
 
+let paint = 1;
+document.querySelector(".painting").addEventListener("click", paintDrowing);
+function paintDrowing(){
+  document.querySelector(".canvas__box").classList.toggle("showing");
+}
 /* WIP!!!!!!!! */
 let cross = 1;
 function btnCross() {
@@ -47,5 +49,6 @@ function reset() {
   document.querySelector(".titleName").classList.remove("js-titleName");
   document.querySelector(".member__box").classList.remove("active");
   document.querySelector(".member__box__box").classList.remove("showing");
+  document.querySelector(".canvas__box").classList.remove("showing");
   cross = 1;
 }
