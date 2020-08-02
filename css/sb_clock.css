@@ -6,6 +6,18 @@
   padding: 0px 30px;
 }
 
+
+/* navibar act */
+.hide-clock.change {
+  display: none;
+  justify-content: flex-end;
+  width: 550px;
+  height: 250px;
+  padding: 0px 30px;
+}
+/*  */
+
+
 .js-hide-clock {
   display: none;
 }
