@@ -13,6 +13,7 @@ Sketchbook on Vanilla JS
 - [ ] Weather
 - [ ] Daily Photo
 - [ ] Offline Support
+- [ ] Test terminal
 
 ## Member
 
