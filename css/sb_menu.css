@@ -2,7 +2,7 @@
 /* @@@@@@@@@@@@@@ HEADER & MENU NAV @@@@@@@@@@@@*/
 .header {
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
   top: 20px;
