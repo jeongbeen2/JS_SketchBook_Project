@@ -58,3 +58,12 @@ function reset() {
   document.querySelector(".canvas__box").classList.remove("showing");
   cross = 1;
 }
+
+// function naviBar() {
+//   var h = $(window).scrollTop();
+//   if (h >= $('.about').position().top) {
+//     $('.menu-right button').css('color', '#4a4a4a');
+//   } else {
+//     $('.menu-right button').css('color', '#fff');
+//   }
+// }
