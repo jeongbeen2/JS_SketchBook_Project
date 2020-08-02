@@ -59,11 +59,27 @@ function reset() {
   cross = 1;
 }
 
-// function naviBar() {
-//   var h = $(window).scrollTop();
-//   if (h >= $('.about').position().top) {
-//     $('.menu-right button').css('color', '#4a4a4a');
-//   } else {
-//     $('.menu-right button').css('color', '#fff');
-//   }
-// }
+
+$(document).on('scroll', naviBar);
+function naviBar() {
+  let h = $(window).scrollTop();
+  if (h >= $('.contents').position().top) {
+    $('.header').addClass('change');
+    $('.ico-md-1').addClass('change');
+    $('.ico-md-2').addClass('change');
+    $('.ico-gooc').addClass('change');
+    $('.hide-clock').addClass('change');
+    $('.xbox').addClass('change');
+    $('.titleName').addClass('change');
+    $('.menu__btn').addClass('change');
+  } else {
+    $('.header').removeClass('change');
+    $('.ico-md-1').removeClass('change');
+    $('.ico-md-2').removeClass('change');
+    $('.ico-gooc').removeClass('change');
+    $('.hide-clock').removeClass('change');
+    $('.xbox').removeClass('change');
+    $('.titleName').removeClass('change');
+    $('.menu__btn').removeClass('change');
+  }
+}
