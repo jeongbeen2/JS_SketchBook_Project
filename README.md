@@ -6,7 +6,6 @@ Sketchbook on Vanilla JS
 
 - [x] Clock
 - [x] Music
-- [x] Tree
 - [ ] Header navi-bar
 - [ ] Music Play List
 - [ ] To Do List
@@ -14,6 +13,7 @@ Sketchbook on Vanilla JS
 - [ ] Daily Photo
 - [ ] Offline Support
 - [ ] Test terminal
+- [x] Test protection
 
 ## Member
 
