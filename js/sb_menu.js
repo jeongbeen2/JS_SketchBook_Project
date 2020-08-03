@@ -86,9 +86,9 @@ function reset() {
   document.querySelector(".ico-md-1").classList.remove("js-ico-md");
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
-  document.querySelector(".member__box").classList.remove("active");
-  document.querySelector(".member__box").style.display = "none";
-  document.querySelector(".canvas__box").style.display = "none";
+  // document.querySelector(".member__box").classList.remove("active");
+  // document.querySelector(".member__box").style.display = "none";
+  // document.querySelector(".canvas__box").style.display = "none";
   cross = 1;
 }
 
