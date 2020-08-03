@@ -15,7 +15,8 @@
 /* scroll HEADER ▼ */
 .js-scroll-header {
   height: 100px;
-  margin-top: -10px;
+  margin-top: -20px;
+  background-color: #101010;
 }
 
 /* -----▼▼ TITLE ▼▼----- */
