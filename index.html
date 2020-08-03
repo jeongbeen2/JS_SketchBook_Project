@@ -10,20 +10,63 @@
     <!-- header + nav -->
     <!-- header + nav -->
     <header class="header">
-
-       <a class="ico-gooc" href="index.html">
+      <div class="ico-music">
+        <a class="ico-gooc" href="index.html">
           <span class="ico-gooc__column">
             <img class="ico-md-1" src="css/svg/dolphin.svg" alt="">
             <img class="ico-md-2" src="css/svg/chainsaw.svg" alt=""></span>
             <span class="titleName">GOOC</span></a>
-
-           <svg class="xbox">
-          <line id="mtop" x1="0" x2="60" y1="1" y2="1" class="xbox__rect"></line>
+            <div class="music">
+              <div class="music-flexbox1">
+                <div class="center-btn">
+                  <button id="previous"><b><<</b></button>
+                  <button id="play-btn">
+                    <img id="play" src="css/img/play.png" width="20" height="20">
+                  </button>
+                  <button id="stop-btn">
+                    <img id="stop" src="css/img/stop.png" width="20" height="20" />
+                  </button>
+                  <button id="next"><b>>></b></button>
+                  <button id="play-list">
+                    <img id="list" src="css/img/menu.png" width="10" height="10">
+                  </button>
+                  <div id="popup" role="alert">
+                    <div id="popup-container">
+                  <button id="song1" class="song">Stephan F - Astronomia 2K19 (Radio Mix)</button>
+                  <button id="song2" class="song">Mariah Carey - All I Want For Christmas Is You</button>
+                  <button id="song3" class="song">Ariana Grande - Santa Tell Me</button>
+                  <button id="song4" class="song">Wham - Last Christmas</button>
+                  <button id="close-btn">닫기</button>
+                </div>
+              </div>
+            </div>
+            <div class="right-btn">
+              <button id="volume">
+                <img id="vol" src="css/img/vol2.png" width="20" height="20">
+              </button>
+              <div class="volume-control">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              </div>
+            </div>
+            </div>
+            <div class="music-flexbox2">
+              <div class="marquee">
+                <div>
+                  <span id="now-playing1">jebal jom ba ggi ra go sibal</span>
+                  <span id="now-playing2">jebal jom ba ggi ra go sibal</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+            <svg class="xbox">
+              <line id="mtop" x1="0" x2="60" y1="1" y2="1" class="xbox__rect"></line>
           <line id="mbot" x1="60" x2="0" y1="13" y2="13" class="xbox__rect"></line>
         </svg>
-
+        
         <div class="hide-clock"><h1>00:00</h1></div>
-
+        
         <ul class="menu">
           <button class="menu__btn what">What's GooC?</button>
           <button class="menu__btn members">Members</button>
@@ -35,7 +78,7 @@
     </header>
     <!-- header + nav -->
     <!-- header + nav -->
-
+    
     <!-- main -->
     <!-- main -->
     <div class="js-listener-first"></div>
@@ -80,7 +123,7 @@
           <div class="controls__color jsColor" style="background-color:#5856D6"></div>
         </div>
       </div>
-    <div class="music">
+    <!-- <div class="music">
       <div class="music-flexbox1">
         <div class="center-btn">
           <button id="previous"><b><<</b></button>
@@ -103,9 +146,9 @@
             <button id="close-btn">닫기</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="right-btn">
+      <!-- <div class="right-btn">
         <button id="volume">
           <img id="vol" src="css/img/vol2.png" width="25" height="25">
         </button>
@@ -113,18 +156,19 @@
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="music-flexbox2">
-        <div class="marquee">
-          <div>
-            <span id="now-playing1">jebal jom ba ggi ra go sibal</span>
-            <span id="now-playing2">jebal jom ba ggi ra go sibal</span>
+    <!-- <div class="music-flexbox2">
+      <div class="marquee">
+        <div>
+          <span id="now-playing1">jebal jom ba ggi ra go sibal</span>
+          <span id="now-playing2">jebal jom ba ggi ra go sibal</span>
           </div>
         </div>
+      </div>
     </div>
-    </div>
-    </div>
+  </div> -->
+</div>
 <!-- footer -->
 <!-- footer -->
     <footer>
