@@ -112,6 +112,7 @@ function naviBar() {
     $(".menu__btn").addClass("js-scroll-menu__btn");
     $(".js-menu").addClass("js-scroll-menu");
     $(".xbox").addClass("js-scroll-xbox");
+    $(".music").addClass("js-scroll-music");
   } else {
     $(".header").removeClass("js-scroll-header");
     $(".ico-md-1").removeClass("js-scroll-ico-md-1");
@@ -122,5 +123,7 @@ function naviBar() {
     $(".menu__btn").removeClass("js-scroll-menu__btn");
     $(".js-menu").removeClass("js-scroll-menu");
     $(".xbox").removeClass("js-scroll-xbox");
+    $(".music").removeClass("js-scroll-music");
   }
 }
+naviBar();
