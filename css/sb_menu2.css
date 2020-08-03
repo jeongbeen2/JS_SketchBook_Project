@@ -54,7 +54,13 @@
 
 /* -----▼▼ TITLE-ICON ▼▼----- */
 /* TITLE-ICON default ▼ */
+.ico-music {
+  display: block;
+}
+
+
 .ico-gooc {
+  height: 100px;
   margin: 20px 40px;
   display: flex;
   justify-content: center;
