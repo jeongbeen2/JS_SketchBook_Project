@@ -87,6 +87,20 @@
   /*   transition-delay: 0.8s; */
 }
 
+/* scroll Musicplayer ▼ */
+.js-scroll-music {
+  margin-top: -20px;
+}
+
+.js-scroll-ico-gooc {
+  height: 80px;
+  margin: 20px 40px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
 /* scroll TITLE-ICON ▼ */
 .js-scroll-ico-md-1,
 .js-scroll-ico-md-2 {
