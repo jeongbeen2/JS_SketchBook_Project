@@ -5,7 +5,7 @@ let mem = 1;
 document.querySelector(".members").addEventListener("click", memberImage);
 function memberImage() {
   document.querySelector(".member__box").classList.toggle("active");
-  document.querySelector(".member__box__box").classList.toggle("showing");
+  document.getElementsByClassName("member__box__box").classList.toggle("showing");
 }
 
 document.querySelector(".what").addEventListener("click", function () {
