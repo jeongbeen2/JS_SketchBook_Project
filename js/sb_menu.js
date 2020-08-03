@@ -126,3 +126,4 @@ function naviBar() {
     $(".music").removeClass("js-scroll-music");
   }
 }
+naviBar();
