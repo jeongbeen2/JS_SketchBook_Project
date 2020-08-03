@@ -2,11 +2,18 @@
 
 /* MEMBER BOX EFFECT */
 let mem = 1;
-document.querySelector(".members").addEventListener("click", memberImage);
-function memberImage() {
-  document.querySelector(".member__box").classList.toggle("active");
-  document.getElementsByClassName("member__box__box").classList.toggle("showing");
+function memberBox (){
+  if (mem == "1"){
+    document.querySelector(".member__box").style.display = "flex";
+    document.querySelector(".member__box").classList.add("showing__up");
+    mem = 0;
+  } else if (mem == "0"){
+    document.querySelector(".member__box").style.display = "none";
+    mem = 1;
+  } 
 }
+document.querySelector(".members").addEventListener("click",memberBox);
+
 
 document.querySelector(".what").addEventListener("click", function () {
 document.querySelector(".ico-gooc__column").classList.toggle("move");
@@ -16,6 +23,7 @@ let paint = 1;
 function paintDrowing(){
   if (paint == "1"){
     document.querySelector(".canvas__box").style.display = "flex";
+    document.querySelector(".canvas__box").classList.add("showing__up")
     paint = 0;
   } else if (paint == "0"){
     document.querySelector(".canvas__box").style.display = "none";
@@ -54,8 +62,8 @@ function reset() {
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
   document.querySelector(".member__box").classList.remove("active");
-  document.querySelector(".member__box__box").classList.remove("showing");
-  document.querySelector(".canvas__box").classList.remove("showing");
+  document.querySelector(".member__box").style.display = "none";
+  document.querySelector(".canvas__box").style.display = "none";
   cross = 1;
 }
 

@@ -208,7 +208,7 @@
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 /*@@@@@@@@@@@@@@ MEMBER__BOX & IMAGE @@@@@@@@@@@@@@@@@ */
 .member__box {
-  display: flex;
+  display: none;
   justify-content: space-between;
   top: 280px;
   z-index: -1;
@@ -235,6 +235,20 @@
 }
 .name-blank {
   margin-top: 20px;
+}
+
+.showing__up{
+  animation: showingUp 1s ease-in-out;
+}
+
+
+@keyframes showingUp{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 
