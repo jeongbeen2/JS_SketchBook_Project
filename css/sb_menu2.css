@@ -1,0 +1,226 @@
+/* -----▼▼ HEADER ▼▼----- */
+/* HEADER default ▼ */
+.header {
+  width: 100%;
+  height: 360px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 20px;
+  margin: 20px;
+  z-index: 10;
+}
+
+/* scroll HEADER ▼ */
+.js-scroll-header {
+  height: 100px;
+  margin-top: 0px;
+}
+
+/* -----▼▼ TITLE ▼▼----- */
+/* TITLE default ▼ */
+.titleName {
+  font-family: "Recursive", sans-serif;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* scroll TITLE ▼ */
+.js-scroll-titleName {
+  font-size: 40px;
+  margin-left: 20px;
+}
+
+/* TITLE p default ▼ */
+.titleName::after {
+  font-family: "Recursive", sans-serif;
+  content: "Virtual World \A Architects Group";
+  white-space: pre;
+  color: gray;
+  font-size: 15px;
+  margin-left: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* scroll p ▼ */
+.js-scroll-titleName::after {
+  font-size: 10px;
+}
+
+/* -----▼▼ TITLE-ICON ▼▼----- */
+/* TITLE-ICON default ▼ */
+.ico-gooc {
+  margin: 20px 40px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* TITLE-ICON hover ▼ */
+.ico-gooc:hover {
+  transform: translateY(-10px);
+}
+
+.ico-gooc__column {
+  display: flex;
+}
+.js-ico-md {
+  width: 100px;
+  height: 100px;
+  /*   transition-delay: 0.8s; */
+}
+.ico-md-1,
+.ico-md-2 {
+  width: 130px;
+  height: 130px;
+  transition: all 0.5s ease-in-out;
+  /* transition-delay: 0.4s; */
+}
+
+/* -----▼▼ NAVIGATION ▼▼----- */
+/* NAVIGATION default ▼ */
+.menu {
+  display: none;
+}
+
+/* clicked NAVIGATION ▼ */
+.js-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 550px;
+  height: 200px;
+  padding: 50px;
+}
+
+/* scroll NAVIGATION ▼ */
+.js-scroll-menu {
+  flex-direction: row;
+  width: 1500px;
+  height: 100px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -----▼▼ MENU-BTN ▼▼----- */
+/* MENU-BTN animation▼ */
+@keyframes AnmenuUp {
+  0% {
+    color: #101010;
+  }
+  50% {
+    color: #101010;
+  }
+  100% {
+    color: white;
+  }
+}
+
+/* MENU-BTN default ▼ */
+.menu__btn {
+  color: white;
+  font-size: 70px;
+  transition: color 0.3s ease-in-out;
+  outline: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 50px;
+}
+
+/* scroll MENU-BTN ▼ */
+.js-scroll-menu__btn {
+  font-size: 30px;
+  margin-right: 20px;
+}
+.what {
+  animation: AnmenuUp 1s ease-in-out;
+}
+.members {
+  animation: AnmenuUp 1.2s ease-in-out;
+}
+.career {
+  animation: AnmenuUp 1.4s ease-in-out;
+}
+.painting {
+  animation: AnmenuUp 1.6s ease-in-out;
+}
+.coffin {
+  animation: AnmenuUp 1.8s ease-in-out;
+}
+
+.menu__btn:hover {
+  color: rgb(253, 186, 61);
+}
+
+/* navibar act */
+.ico-md-1.change,
+.ico-md-2.change {
+  width: 60px;
+  height: 60px;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+}
+.ico-gooc.change {
+  height: 30px;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+/* -----▼▼ NAV-MAIN-BTN(X,=) ▼▼----- */
+/* NAV-MAIN-BTN default ▼ */
+.xbox {
+  position: absolute;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 20px;
+  cursor: pointer;
+  overflow: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+/* clicked MENU-BTN ▼ */
+.xbox-click {
+  width: 65px;
+  height: 65px;
+}
+.xbox__rect {
+  stroke: white;
+  stroke-width: 3px;
+  transform: translateX(0) translateY(0) rotate(0);
+  transition: all 0.5s ease-in-out;
+}
+.changes-top {
+  transform: translateX(60px) translateY(0) rotate(135deg);
+}
+.changes-bot {
+  transform: translateY(-10px) translateX(25px) rotate(45deg);
+}
+
+/* scroll MENU-BTN ▼ */
+.js-scroll-xbox {
+  transform: scale(0.8) translateY(25px);
+  transition: all 0.5s ease-in-out;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+.contents {
+  position: absolute;
+  top: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
