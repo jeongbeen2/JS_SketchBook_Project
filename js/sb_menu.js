@@ -71,22 +71,20 @@ function naviBar() {
   let h = $(window).scrollTop();
   if (h >= $(".js-listener-second").position().top) {
     $(".header").addClass("js-scroll-header");
-    $(".ico-md-1").addClass("change");
-    $(".ico-md-2").addClass("change");
-    $(".ico-gooc").addClass("change");
+    $(".ico-md-1").addClass("js-scroll-ico-md-1");
+    $(".ico-md-2").addClass("js-scroll-ico-md-2");
+    $(".ico-gooc").addClass("js-scroll-ico-gooc");
     $(".hide-clock").addClass("change");
-    $(".xbox").addClass("change");
     $(".titleName").addClass("js-scroll-titleName");
     $(".menu__btn").addClass("js-scroll-menu__btn");
     $(".js-menu").addClass("js-scroll-menu");
     $(".xbox").addClass("js-scroll-xbox");
   } else {
     $(".header").removeClass("js-scroll-header");
-    $(".ico-md-1").removeClass("change");
-    $(".ico-md-2").removeClass("change");
-    $(".ico-gooc").removeClass("change");
+    $(".ico-md-1").removeClass("js-scroll-ico-md-1");
+    $(".ico-md-2").removeClass("js-scroll-ico-md-2");
+    $(".ico-gooc").removeClass("js-scroll-ico-gooc");
     $(".hide-clock").removeClass("change");
-    $(".xbox").removeClass("change");
     $(".titleName").removeClass("js-scroll-titleName");
     $(".menu__btn").removeClass("js-scroll-menu__btn");
     $(".js-menu").removeClass("js-scroll-menu");
