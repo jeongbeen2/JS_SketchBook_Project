@@ -35,7 +35,7 @@ function playMusic() {
   if (pause == "1") {
     document.getElementById("play").src = "css/img/pause.png";
     playlist[idx].play();
-    // playlist[idx].volume = slider.value / 100;
+    playlist[idx].volume = slider.value / 100;
     playlist[idx].addEventListener("ended", function () {
       nextSong();
     });
@@ -200,15 +200,15 @@ function muteAll() {
 
 
 // Click Me 누르면 play 한번 더누르면 pause
-// document.querySelector(".coffin").addEventListener("click", function() {
-//   if (jja == 1) {
-//     pause = 1;
-//     playMusic();   
-//   } else if (jja == 0) {
-//     pause = 0;
-//     playMusic();
-//   }
-// });
+document.querySelector(".coffin").addEventListener("click", function() {
+  if (jja == 1) {
+    pause = 1;
+    playMusic();   
+  } else if (jja == 0) {
+    pause = 0;
+    playMusic();
+  }
+});
 
 
 // Click Me 누르면 뮤직플레이어 나타남 한번 더 누르면 사라짐
