@@ -9,6 +9,7 @@
     align-items: center;
     border-radius: 15px;
     display: none;
+    z-index: 2;
 }
 
 .canvas__box__column{
