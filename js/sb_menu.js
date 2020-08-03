@@ -6,12 +6,14 @@ let wht = 1;
 function whatBox(){
   if (wht == "1"){
     document.querySelector(".what-gooc").style.display = "flex";
-    document.querySelector(".ico-gooc").style.opacity = 0;
+    // document.querySelector(".ico-gooc").style.opacity = 0;
+    document.querySelector(".ico-gooc").style.display = "none";
     document.querySelector(".what-gooc").classList.add("showing__up");
     wht = 0;
   } else if(wht == "0"){
     document.querySelector(".what-gooc").style.display = "none";
-    document.querySelector(".ico-gooc").style.opacity = 1;
+    // document.querySelector(".ico-gooc").style.opacity = 1;
+    document.querySelector(".ico-gooc").style.display = "flex";
     document.querySelector(".ico-gooc").classList.add("showing__up");
     wht = 1;
   }
