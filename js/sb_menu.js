@@ -1,5 +1,31 @@
 "use strict";
 
+/* What's BOX EFFECT */
+
+let wht = 1;
+function whatBox(){
+  if (wht == "1"){
+    document.querySelector(".what-gooc").style.display = "flex";
+    document.querySelector(".ico-gooc").style.opacity = 0;
+    document.querySelector(".what-gooc").classList.add("showing__up");
+    wht = 0;
+  } else if(wht == "0"){
+    document.querySelector(".what-gooc").style.display = "none";
+    document.querySelector(".ico-gooc").style.opacity = 1;
+    document.querySelector(".ico-gooc").classList.add("showing__up");
+    wht = 1;
+  }
+}
+document.querySelector(".what").addEventListener("click", whatBox);
+
+
+
+
+
+
+
+
+
 /* MEMBER BOX EFFECT */
 let mem = 1;
 function memberBox() {
@@ -64,6 +90,13 @@ function reset() {
   document.querySelector(".member__box").style.display = "none";
   document.querySelector(".canvas__box").style.display = "none";
   cross = 1;
+}
+
+function menuReset(){
+  document.querySelector(".what__Box").style.display = "none";
+  document.querySelector(".member__box").style.display = "none";
+  document.querySelector(".carrer__Box").style.display = "none";
+  document.querySelector(".canvas__box").style.display = "none";
 }
 
 $(document).on("scroll", naviBar);

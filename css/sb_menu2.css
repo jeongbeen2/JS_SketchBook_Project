@@ -88,6 +88,39 @@
   height: 60px;
 }
 
+.what-gooc{
+  display: none;
+  position: fixed;
+}
+
+.spin{
+  animation: spin 10s ease-in-out;
+}
+
+.swing{
+  animation: swing 10s ease-in-out;
+}
+
+@keyframes spin{
+  from{
+    transform: none;
+  }
+  to{
+    transform: rotate(10800deg);
+  }
+}
+@keyframes swing{
+  0%{
+    transform: none;
+  }
+  50%{
+    transform: translateX(-20px);
+    transform: rotate(-30deg);
+  }
+  100%{
+    transform: none;
+  }
+}
 /* -----▼▼ NAVIGATION ▼▼----- */
 /* NAVIGATION default ▼ */
 .menu {
