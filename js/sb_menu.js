@@ -90,4 +90,4 @@ function naviBar() {
     $('.titleName').removeClass('change');
     $('.menu__btn').removeClass('change');
   }
-}
+} 

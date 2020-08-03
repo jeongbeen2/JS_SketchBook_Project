@@ -54,6 +54,9 @@
 .painting {
   animation: AnmenuUp 1.6s ease-in-out;
 }
+.coffin {
+  animation: AnmenuUp 1.8s ease-in-out;
+}
 
 .what :hover {
   color: rgb(253, 186, 61);

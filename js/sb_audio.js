@@ -200,7 +200,7 @@ function muteAll() {
 
 
 // Click Me 누르면 play 한번 더누르면 pause
-document.querySelector(".coffin__btn").addEventListener("click", function() {
+document.querySelector(".coffin").addEventListener("click", function() {
   if (jja == 1) {
     pause = 1;
     playMusic();   
@@ -222,7 +222,7 @@ function jjajan() {
     jja = 1;
   }
 }
-document.querySelector(".coffin__btn").addEventListener("click", jjajan);
+document.querySelector(".coffin").addEventListener("click", jjajan);
 
 
 // 플레이 리스트 누르면 popup으로 목록 나옴
