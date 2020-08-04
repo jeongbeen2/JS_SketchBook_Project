@@ -155,6 +155,8 @@
   width: 550px;
   height: 200px;
   padding: 50px;
+  animation: showingUp 1.2s ease-in-out;
+  transition: padding 1s ease-in-out;
 }
 
 /* scroll NAVIGATION ▼ */
@@ -165,6 +167,7 @@
   padding: 20px;
   justify-content: center;
   align-items: center;
+  animation: showingUp2 1.2s ease-in-out;
 }
 
 /* -----▼▼ MENU-BTN ▼▼----- */
@@ -182,6 +185,7 @@
 }
 
 /* MENU-BTN default ▼ */
+
 .menu__btn {
   color: white;
   font-size: 70px;
@@ -276,7 +280,7 @@
   padding: 15px;
   border: none;
   outline: none;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.05), 0 5px 5px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05), 0 5px 5px 0 rgba(0, 0, 0, 0.05);
   border-radius: 50%;
   cursor: pointer;
   position: fixed;
