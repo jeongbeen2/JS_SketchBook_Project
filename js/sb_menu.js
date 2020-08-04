@@ -5,14 +5,16 @@
 let wht = 1;
 function whatBox() {
   if (wht == "1") {
-    document.querySelector(".what-gooc").style.display = "flex";
-    // document.querySelector(".ico-gooc").style.opacity = 0;
-    document.querySelector(".ico-gooc").style.display = "none";
-    document.querySelector(".what-gooc").classList.add("showing__up");
+    // document.querySelector(".what-gooc").style.display = "flex";
+    document.querySelector(".ico-md-1").classList.add("spin");
+    document.querySelector(".ico-md-2").classList.add("swing");
+    // document.querySelector(".ico-gooc").style.display = "none";
+    // document.querySelector(".ico-gooc").classList.add("showing__up");
     wht = 0;
   } else if (wht == "0") {
-    document.querySelector(".what-gooc").style.display = "none";
-    // document.querySelector(".ico-gooc").style.opacity = 1;
+    // document.querySelector(".what-gooc").style.display = "none";
+    document.querySelector(".ico-md-1").classList.remove("spin");
+    document.querySelector(".ico-md-2").classList.remove("swing");
     document.querySelector(".ico-gooc").style.display = "flex";
     document.querySelector(".ico-gooc").classList.add("showing__up");
     wht = 1;
@@ -22,29 +24,12 @@ document.querySelector(".what").addEventListener("click", whatBox);
 
 /* MEMBER BOX EFFECT */
 let mem = 1;
-// function memberBox() {
-//   if (mem == "1") {
-//     document.querySelector(".member__box").style.display = "flex";
-//     document.querySelector(".member__box").classList.add("showing__up");
-//     mem = 0;
-//   } else if (mem == "0") {
-//     document.querySelector(".member__box").style.display = "none";
-//     mem = 1;
-//   }
-// }
-// document.querySelector(".members").addEventListener("click", memberBox);
-
-// document.querySelector(".what").addEventListener("click", function () {
-//   document.querySelector(".ico-gooc__column").classList.toggle("move");
-// });
 
 document.querySelector(".members").addEventListener("click", memberBox2);
 function memberBox2() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
     $(".member__box").css("display", "flex");
-    // .fadeIn(1000);
-    // $(".member__box").hide();
     $(".profile").animate({marginLeft: "150px"}, {duration: 1000, queue:false});
     $(".profile").animate({marginRight: "150px"}, {duration: 1000, queue: false});
     mem = 0;
@@ -100,9 +85,6 @@ function reset() {
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
   document.querySelector(".contents").classList.remove("js-contents");
-  // document.querySelector(".member__box").classList.remove("active");
-  // document.querySelector(".member__box").style.display = "none";
-  // document.querySelector(".canvas__box").style.display = "none";
   cross = 1;
 }
 
@@ -117,3 +99,4 @@ function openContents() {
   var element = document.querySelector(".contents");
   element.classList.add("js-contents");
 }
+
