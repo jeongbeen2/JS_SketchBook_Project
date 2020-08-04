@@ -26,3 +26,16 @@ function naviBar() {
   }
 }
 naviBar();
+
+$(window).on('scroll', function() {
+  let windowBottom = $(window).scrollTop() + $(window).height();
+  if (windowBottom == $(document).height()) {
+    $('.to-top-btn').fadeIn(500);
+  } else {
+    $('.to-top-btn').fadeOut(500);
+  }
+});
+
+$('.to-top-btn').on('click', function() {
+  $('html, body').animate({scrollTop: 0}, 500);
+});
