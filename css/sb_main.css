@@ -4,22 +4,23 @@
 }
 
 main {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   margin-top: 200px;
   width: 100%;
   height: 200vh;
+  overflow: hidden;
 }
 /* -----▼▼ PHOTO-SLIDE ▼▼----- */
 .mySlides {
-  width: 100%;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-height: 1300px;
+  display: block;
 }
 
 .js-photoSlide {
+  display: none;
   width: 100%;
+  height: 100%;
 }
