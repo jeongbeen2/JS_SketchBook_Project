@@ -42,12 +42,27 @@ document.querySelector(".members").addEventListener("click", memberBox2);
 function memberBox2() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
-    $("#dh").animate({ right: "+=400px" }, 1000);
-    $("#ys").animate({ left: "+=400px" }, 1000);
+    $(".member__box").css("display", "flex");
+    // .fadeIn(1000);
+    // $(".member__box").hide();
+    $(".profile").animate(
+      { marginLeft: "150px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "150px" },
+      { duration: 1000, queue: false }
+    );
     mem = 0;
   } else if (mem == "0") {
-    $("#dh").animate({ right: "-=400px" }, 1000);
-    $("#ys").animate({ left: "-=400px" }, 1000);
+    $(".profile").animate(
+      { marginLeft: "0px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "0px" },
+      { duration: 1000, queue: false }
+    );
     $(".member__box").fadeOut(1000);
     mem = 1;
   }
