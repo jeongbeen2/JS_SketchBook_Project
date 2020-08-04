@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   top: 0px;
-  z-index: 10;
   transition: padding 1s ease-in-out;
   padding: 40px 0;
   background-color: #101010;
@@ -279,6 +278,5 @@
   position: fixed;
   bottom: 30px;
   right: 30px;
-  z-index: 1;
   display: none;
 }
