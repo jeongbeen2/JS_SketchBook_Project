@@ -9,7 +9,7 @@ function naviBar() {
     $(".hide-clock").addClass("change");
     $(".titleName").addClass("js-scroll-titleName");
     $(".menu__btn").addClass("js-scroll-menu__btn");
-    $(".js-menu").addClass("js-scroll-menu");
+    $(".menu").addClass("js-scroll-menu");
     $(".xbox").addClass("js-scroll-xbox");
     $(".music").addClass("js-scroll-music");
   } else {
@@ -20,7 +20,7 @@ function naviBar() {
     $(".hide-clock").removeClass("change");
     $(".titleName").removeClass("js-scroll-titleName");
     $(".menu__btn").removeClass("js-scroll-menu__btn");
-    $(".js-menu").removeClass("js-scroll-menu");
+    $(".menu").removeClass("js-scroll-menu");
     $(".xbox").removeClass("js-scroll-xbox");
     $(".music").removeClass("js-scroll-music");
   }
