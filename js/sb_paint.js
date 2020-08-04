@@ -71,14 +71,14 @@ function handleContextMenu(event){
 }
 
 function handleSaveClick(){
-    const image = canvas.toDataURL("image/jpeg");
+    const image = canvas.toDataURL();
     const link = document.createElement("a");
     link.href = image;
     link.download = "GOOC";
     link.click();
 }
 
-function handleEraser(event){
+function handleEraser(){
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, 600, 400);
 }
