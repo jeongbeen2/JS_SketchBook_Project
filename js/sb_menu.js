@@ -3,14 +3,14 @@
 /* What's BOX EFFECT */
 
 let wht = 1;
-function whatBox(){
-  if (wht == "1"){
+function whatBox() {
+  if (wht == "1") {
     document.querySelector(".what-gooc").style.display = "flex";
     // document.querySelector(".ico-gooc").style.opacity = 0;
     document.querySelector(".ico-gooc").style.display = "none";
     document.querySelector(".what-gooc").classList.add("showing__up");
     wht = 0;
-  } else if(wht == "0"){
+  } else if (wht == "0") {
     document.querySelector(".what-gooc").style.display = "none";
     // document.querySelector(".ico-gooc").style.opacity = 1;
     document.querySelector(".ico-gooc").style.display = "flex";
@@ -19,14 +19,6 @@ function whatBox(){
   }
 }
 document.querySelector(".what").addEventListener("click", whatBox);
-
-
-
-
-
-
-
-
 
 /* MEMBER BOX EFFECT */
 let mem = 1;
@@ -43,11 +35,11 @@ let mem = 1;
 // document.querySelector(".members").addEventListener("click", memberBox);
 
 // document.querySelector(".what").addEventListener("click", function () {
-  //   document.querySelector(".ico-gooc__column").classList.toggle("move");
-  // });
-  
+//   document.querySelector(".ico-gooc__column").classList.toggle("move");
+// });
+
 document.querySelector(".members").addEventListener("click", memberBox2);
-  function memberBox2() {
+function memberBox2() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
     $("#dh").animate({right: "+=400px"}, 1000);
@@ -60,7 +52,6 @@ document.querySelector(".members").addEventListener("click", memberBox2);
     mem = 1;
   }
 }
-
 
 /* PAINTING EFFECT */
 let paint = 1;
@@ -105,16 +96,21 @@ function reset() {
   document.querySelector(".ico-md-1").classList.remove("js-ico-md");
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
+  document.querySelector(".contents").classList.remove("js-contents");
   // document.querySelector(".member__box").classList.remove("active");
   // document.querySelector(".member__box").style.display = "none";
   // document.querySelector(".canvas__box").style.display = "none";
   cross = 1;
 }
 
-function menuReset(){
+function menuReset() {
   document.querySelector(".what__Box").style.display = "none";
   document.querySelector(".member__box").style.display = "none";
   document.querySelector(".carrer__Box").style.display = "none";
   document.querySelector(".canvas__box").style.display = "none";
 }
 
+function openContents() {
+  var element = document.querySelector(".contents");
+  element.classList.add("js-contents");
+}
