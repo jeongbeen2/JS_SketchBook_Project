@@ -1,10 +1,8 @@
 .member__box {
-  display: none;
+  /*   display: none; */
   justify-content: space-between;
-  top: 280px;
-  z-index: -1;
-  width: 50%;
-  margin: 50px;
+  width: 100%;
+  height: 500px;
 }
 
 .member__img {
@@ -16,8 +14,8 @@
 .member__box__box {
   /* position: absolute; */
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .member__box__name {
