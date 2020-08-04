@@ -30,22 +30,39 @@ document.querySelector(".what").addEventListener("click", whatBox);
 
 /* MEMBER BOX EFFECT */
 let mem = 1;
-function memberBox() {
+// function memberBox() {
+//   if (mem == "1") {
+//     document.querySelector(".member__box").style.display = "flex";
+//     document.querySelector(".member__box").classList.add("showing__up");
+//     mem = 0;
+//   } else if (mem == "0") {
+//     document.querySelector(".member__box").style.display = "none";
+//     mem = 1;
+//   }
+// }
+// document.querySelector(".members").addEventListener("click", memberBox);
+
+// document.querySelector(".what").addEventListener("click", function () {
+  //   document.querySelector(".ico-gooc__column").classList.toggle("move");
+  // });
+  
+document.querySelector(".members").addEventListener("click", memberBox2);
+  function memberBox2() {
   if (mem == "1") {
-    document.querySelector(".member__box").style.display = "flex";
-    document.querySelector(".member__box").classList.add("showing__up");
+    $(".member__box").fadeIn(1000);
+    $("#dh").animate({right: "+=400px"}, 1000);
+    $("#ys").animate({left: "+=400px"}, 1000);
     mem = 0;
   } else if (mem == "0") {
-    document.querySelector(".member__box").style.display = "none";
+    $("#dh").animate({right: "-=400px"}, 1000);
+    $("#ys").animate({left: "-=400px"}, 1000);
+    $(".member__box").fadeOut(1000);
     mem = 1;
   }
 }
-document.querySelector(".members").addEventListener("click", memberBox);
 
-document.querySelector(".what").addEventListener("click", function () {
-  document.querySelector(".ico-gooc__column").classList.toggle("move");
-});
 
+/* PAINTING EFFECT */
 let paint = 1;
 function paintDrowing() {
   if (paint == "1") {
