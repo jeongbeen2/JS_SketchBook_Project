@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GooC</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .js-photoSlide {
+  display: none;
+}
+    </style>
   </head>
   <body>
     <!-- header + nav -->
@@ -13,8 +18,8 @@
       <div class="ico-music">
         <a class="ico-gooc" href="index.html">
           <span class="ico-gooc__column">
-            <img class="ico-md-1" src="css/svg/dolphin.svg" alt="">
-            <img class="ico-md-2" src="css/svg/chainsaw.svg" alt=""></span>
+            <img class="ico-md-1" src="css/svg/dolphin.svg" alt="goocicon1">
+            <img class="ico-md-2" src="css/svg/chainsaw.svg" alt="goocicon2"></span>
             <span class="titleName">GOOC!</span></a>
             <div class="music">
               <div class="music-flexbox1">
@@ -83,6 +88,11 @@
     <!-- main -->
     <div class="js-listener-first"></div>
     <main class="js-listener-second">
+      <div class="mySlides">
+      <img class="js-photoSlide" src="css/img/unsplash1.jpg" alt="1" >
+      <img class="js-photoSlide" src="css/img/unsplash2.jpg" alt="2" >
+      <img class="js-photoSlide" src="css/img/unsplash3.jpg" alt="3" >
+      </div>
 
     </main>
 
@@ -180,6 +190,7 @@
 <script src="js/sb_audio.js"></script>
 <script src="js/sb_menu.js"></script>
 <script src="js/sb_scroll.js"></script>
+<script src="js/sb_photoslide.js"></script>
 <script src="https://kit.fontawesome.com/2d4bec9180.js" crossorigin="anonymous"></script>
 </body>
 
