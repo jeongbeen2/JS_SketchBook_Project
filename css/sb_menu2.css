@@ -6,16 +6,16 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  top: 20px;
-  margin: 20px;
+  top: 0px;
   z-index: 10;
-  transition: margin 1s ease-in-out;
+  transition: padding 1s ease-in-out;
+  padding: 40px 0;
 }
 
 /* scroll HEADER ▼ */
 .js-scroll-header {
   height: 100px;
-  margin-top: -20px;
+  padding: 0;
   background-color: #101010;
 }
 
@@ -58,7 +58,6 @@
 .ico-music {
   display: block;
 }
-
 
 .ico-gooc {
   height: 100px;
@@ -109,36 +108,36 @@
   height: 60px;
 }
 
-.what-gooc{
+.what-gooc {
   display: none;
   position: fixed;
 }
 
-.spin{
+.spin {
   animation: spin 10s ease-in-out;
 }
 
-.swing{
+.swing {
   animation: swing 10s ease-in-out;
 }
 
-@keyframes spin{
-  from{
+@keyframes spin {
+  from {
     transform: none;
   }
-  to{
+  to {
     transform: rotate(10800deg);
   }
 }
-@keyframes swing{
-  0%{
+@keyframes swing {
+  0% {
     transform: none;
   }
-  50%{
+  50% {
     transform: translateX(-100px);
     transform: rotate(-30deg);
   }
-  100%{
+  100% {
     transform: none;
   }
 }
@@ -268,4 +267,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* go to top button */
+
+.to-top-btn {
+  background-color: white;
+  padding: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.05), 0 5px 5px 0 rgba(0,0,0,0.05);
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1;
+  display: none;
 }
