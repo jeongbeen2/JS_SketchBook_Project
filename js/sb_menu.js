@@ -34,12 +34,80 @@ function memberBox2() {
     $(".profile").animate({marginRight: "150px"}, {duration: 1000, queue: false});
     mem = 0;
   } else if (mem == "0") {
-    $(".profile").animate({marginLeft: "0px"}, {duration: 1000, queue: false});
-    $(".profile").animate({marginRight: "0px"}, {duration: 1000, queue: false});
+    $(".profile").animate(
+      { marginLeft: "0px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "0px" },
+      { duration: 1000, queue: false }
+    );
     $(".member__box").fadeOut(1000);
     mem = 1;
   }
 }
+// Career box
+let career = 1;
+function careerBox() {
+  if (career == "1") {
+    document.querySelector(".career__box").style.display = "flex";
+    document.querySelector(".career__box").classList.add("showing__up");
+    career = 0;
+  } else if (career == "0") {
+    document.querySelector(".career__box").style.display = "none";
+    career = 1;
+  }
+}
+document.querySelector(".career").addEventListener("click", careerBox);
+
+let cr_1 = 1;
+function cr1() {
+  if (cr_1 == "1") {
+    document.querySelector(".cr__img1").style.display = "flex";
+    document.querySelector(".cr__img1").classList.add("showing__up");
+    cr_1 = 0;
+  } else if (cr_1 == "0") {
+    document.querySelector(".cr__img1").style.display = "none";
+    cr_1 = 1;
+  }
+}
+document.querySelector(".cr1").addEventListener("click", cr1);
+let cr_2 = 1;
+function cr2() {
+  if (cr_2 == "1") {
+    document.querySelector(".cr__img2").style.display = "flex";
+    document.querySelector(".cr__img2").classList.add("showing__up");
+    cr_2 = 0;
+  } else if (cr_2 == "0") {
+    document.querySelector(".cr__img2").style.display = "none";
+    cr_2 = 1;
+  }
+}
+document.querySelector(".cr2").addEventListener("click", cr2);
+let cr_3 = 1;
+function cr3() {
+  if (cr_3 == "1") {
+    document.querySelector(".cr__img3").style.display = "flex";
+    document.querySelector(".cr__img3").classList.add("showing__up");
+    cr_3 = 0;
+  } else if (cr_3 == "0") {
+    document.querySelector(".cr__img3").style.display = "none";
+    cr_3 = 1;
+  }
+}
+document.querySelector(".cr3").addEventListener("click", cr3);
+let cr_4 = 1;
+function cr4() {
+  if (cr_4 == "1") {
+    document.querySelector(".cr__img4").style.display = "flex";
+    document.querySelector(".cr__img4").classList.add("showing__up");
+    cr_4 = 0;
+  } else if (cr_4 == "0") {
+    document.querySelector(".cr__img4").style.display = "none";
+    cr_4 = 1;
+  }
+}
+document.querySelector(".cr4").addEventListener("click", cr4);
 
 /* PAINTING EFFECT */
 let paint = 1;
