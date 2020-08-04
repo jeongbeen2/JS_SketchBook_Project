@@ -45,12 +45,12 @@ function memberBox2() {
     $(".member__box").css("display", "flex");
     // .fadeIn(1000);
     // $(".member__box").hide();
-    $(".profile").animate({marginLeft: "50px"}, 1000);
-    $(".profile").animate({marginRight: "50px"}, 1000);
+    $(".profile").animate({marginLeft: "150px"}, {duration: 1000, queue:false});
+    $(".profile").animate({marginRight: "150px"}, {duration: 1000, queue: false});
     mem = 0;
   } else if (mem == "0") {
-    $(".profile").animate({marginLeft: "0px"}, 1000);
-    $(".profile").animate({marginRight: "0px"}, 1000);
+    $(".profile").animate({marginLeft: "0px"}, {duration: 1000, queue: false});
+    $(".profile").animate({marginRight: "0px"}, {duration: 1000, queue: false});
     $(".member__box").fadeOut(1000);
     mem = 1;
   }
