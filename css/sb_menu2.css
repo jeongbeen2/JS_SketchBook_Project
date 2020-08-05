@@ -135,9 +135,9 @@
     transform: none;
   }
   50% {
-    transform: translateX(-100px);
     transform: rotate(-30deg);
   }
+
   100% {
     transform: none;
   }
@@ -173,17 +173,6 @@
 
 /* -----▼▼ MENU-BTN ▼▼----- */
 /* MENU-BTN animation▼ */
-@keyframes AnmenuUp {
-  0% {
-    color: #101010;
-  }
-  50% {
-    color: #101010;
-  }
-  100% {
-    color: white;
-  }
-}
 
 /* MENU-BTN default ▼ */
 

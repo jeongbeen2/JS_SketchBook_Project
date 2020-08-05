@@ -2,22 +2,22 @@
 
 /* What's BOX EFFECT */
 
-let wht = 1;
+let wht = true;
 function whatBox() {
-  if (wht == "1") {
+  if (wht === true) {
     // document.querySelector(".what-gooc").style.display = "flex";
     document.querySelector(".ico-md-1").classList.add("spin");
     document.querySelector(".ico-md-2").classList.add("swing");
     // document.querySelector(".ico-gooc").style.display = "none";
     // document.querySelector(".ico-gooc").classList.add("showing__up");
-    wht = 0;
-  } else if (wht == "0") {
+    wht = false;
+  } else if (wht === false) {
     // document.querySelector(".what-gooc").style.display = "none";
     document.querySelector(".ico-md-1").classList.remove("spin");
     document.querySelector(".ico-md-2").classList.remove("swing");
     document.querySelector(".ico-gooc").style.display = "flex";
     document.querySelector(".ico-gooc").classList.add("showing__up");
-    wht = 1;
+    wht = true;
   }
 }
 document.querySelector(".what").addEventListener("click", whatBox);
@@ -30,8 +30,14 @@ function memberBox2() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
     $(".member__box").css("display", "flex");
-    $(".profile").animate({marginLeft: "150px"}, {duration: 1000, queue:false});
-    $(".profile").animate({marginRight: "150px"}, {duration: 1000, queue: false});
+    $(".profile").animate(
+      { marginLeft: "150px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "150px" },
+      { duration: 1000, queue: false }
+    );
     mem = 0;
   } else if (mem == "0") {
     $(".profile").animate(
@@ -47,67 +53,96 @@ function memberBox2() {
   }
 }
 // Career box
-let career = 1;
+let career = true;
 function careerBox() {
-  if (career == "1") {
+  if (career == true) {
     document.querySelector(".career__box").style.display = "flex";
     document.querySelector(".career__box").classList.add("showing__up");
-    career = 0;
-  } else if (career == "0") {
+    career = false;
+  } else {
     document.querySelector(".career__box").style.display = "none";
-    career = 1;
+    resetCr();
+    career = true;
   }
 }
 document.querySelector(".career").addEventListener("click", careerBox);
 
-let cr_1 = 1;
+function resetCr() {
+  document.querySelector(".cr__img1").style.display = "none";
+  document.querySelector(".cr__img2").style.display = "none";
+  document.querySelector(".cr__img3").style.display = "none";
+  document.querySelector(".cr__img4").style.display = "none";
+}
+
+// JQuery 입성! 이걸외않써!
+let cr_1 = true;
+let cr_2 = true;
+let cr_3 = true;
+let cr_4 = true;
+let cr__img1 = $(".cr__img1");
+let cr__img2 = $(".cr__img2");
+let cr__img3 = $(".cr__img3");
+let cr__img4 = $(".cr__img4");
+
 function cr1() {
-  if (cr_1 == "1") {
-    document.querySelector(".cr__img1").style.display = "flex";
-    document.querySelector(".cr__img1").classList.add("showing__up");
-    cr_1 = 0;
-  } else if (cr_1 == "0") {
-    document.querySelector(".cr__img1").style.display = "none";
-    cr_1 = 1;
+  cr_2 = true;
+  cr_3 = true;
+  cr_4 = true;
+  if (cr_1 == true) {
+    resetCr();
+    cr__img1.fadeIn(1000);
+    cr_1 = false;
+  } else {
+    cr__img1.fadeOut(1000);
+    cr_1 = true;
   }
 }
-document.querySelector(".cr1").addEventListener("click", cr1);
-let cr_2 = 1;
+$(".cr1").on("click", cr1);
+
 function cr2() {
-  if (cr_2 == "1") {
-    document.querySelector(".cr__img2").style.display = "flex";
-    document.querySelector(".cr__img2").classList.add("showing__up");
-    cr_2 = 0;
-  } else if (cr_2 == "0") {
-    document.querySelector(".cr__img2").style.display = "none";
-    cr_2 = 1;
+  cr_1 = true;
+  cr_3 = true;
+  cr_4 = true;
+  if (cr_2 == true) {
+    resetCr();
+    cr__img2.fadeIn(1000);
+    cr_2 = false;
+  } else {
+    cr__img2.fadeOut(1000);
+    cr_2 = true;
   }
 }
-document.querySelector(".cr2").addEventListener("click", cr2);
-let cr_3 = 1;
+$(".cr2").on("click", cr2);
+
 function cr3() {
-  if (cr_3 == "1") {
-    document.querySelector(".cr__img3").style.display = "flex";
-    document.querySelector(".cr__img3").classList.add("showing__up");
-    cr_3 = 0;
-  } else if (cr_3 == "0") {
-    document.querySelector(".cr__img3").style.display = "none";
-    cr_3 = 1;
+  cr_2 = true;
+  cr_1 = true;
+  cr_4 = true;
+  if (cr_3 == true) {
+    resetCr();
+    cr__img3.fadeIn(1000);
+    cr_3 = false;
+  } else {
+    cr__img3.fadeOut(1000);
+    cr_3 = true;
   }
 }
-document.querySelector(".cr3").addEventListener("click", cr3);
-let cr_4 = 1;
+$(".cr3").on("click", cr3);
+
 function cr4() {
-  if (cr_4 == "1") {
-    document.querySelector(".cr__img4").style.display = "flex";
-    document.querySelector(".cr__img4").classList.add("showing__up");
-    cr_4 = 0;
-  } else if (cr_4 == "0") {
-    document.querySelector(".cr__img4").style.display = "none";
-    cr_4 = 1;
+  cr_2 = true;
+  cr_3 = true;
+  cr_1 = true;
+  if (cr_4 == true) {
+    resetCr();
+    cr__img4.fadeIn(1000);
+    cr_4 = false;
+  } else {
+    cr__img4.fadeOut(1000);
+    cr_4 = true;
   }
 }
-document.querySelector(".cr4").addEventListener("click", cr4);
+$(".cr4").on("click", cr4);
 
 /* PAINTING EFFECT */
 let paint = 1;
@@ -167,4 +202,3 @@ function openContents() {
   var element = document.querySelector(".contents");
   element.classList.add("js-contents");
 }
-
