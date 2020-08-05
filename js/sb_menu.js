@@ -25,8 +25,8 @@ document.querySelector(".what").addEventListener("click", whatBox);
 /* MEMBER BOX EFFECT */
 let mem = 1;
 
-document.querySelector(".members").addEventListener("click", memberBox2);
-function memberBox2() {
+document.querySelector(".members").addEventListener("click", memberBox);
+function memberBox() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
     $(".member__box").css("display", "flex");
@@ -65,7 +65,14 @@ function careerBox() {
     career = true;
   }
 }
-document.querySelector(".career").addEventListener("click", careerBox);
+document.querySelector(".career").addEventListener("click", function () {
+  if (mem == 0 || career == 0 || paint == 0) {
+    contentsReset();
+    setTimeout(careerBox, 1000);
+  } else {
+    careerBox();
+  }
+});
 
 function resetCr() {
   document.querySelector(".cr__img1").style.display = "none";
@@ -201,4 +208,14 @@ function menuReset() {
 function openContents() {
   var element = document.querySelector(".contents");
   element.classList.add("js-contents");
+}
+
+function contentsReset() {
+  if (mem == 0) {
+    memberBox();
+  } else if (career == 0) {
+    careerBox();
+  } else if (paint == 0) {
+    paintDrowing();
+  }
 }
