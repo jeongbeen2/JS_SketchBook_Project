@@ -25,7 +25,14 @@ document.querySelector(".what").addEventListener("click", whatBox);
 /* MEMBER BOX EFFECT */
 let mem = 1;
 
-document.querySelector(".members").addEventListener("click", memberBox);
+document.querySelector(".members").addEventListener("click", function() {
+  if (mem == 0 || career == false || paint == 0) {
+    contentsReset();
+    // setTimeout(memberBox, 1000);
+  } else if (mem == 1) {
+    memberBox();
+  }
+});
 function memberBox() {
   if (mem == "1") {
     $(".member__box").fadeIn(1000);
@@ -56,20 +63,23 @@ function memberBox() {
 let career = true;
 function careerBox() {
   if (career == true) {
-    document.querySelector(".career__box").style.display = "flex";
-    document.querySelector(".career__box").classList.add("showing__up");
+    // document.querySelector(".career__box").style.display = "flex";
+    // document.querySelector(".career__box").classList.add("showing__up");
+    $(".career__box").fadeIn(1000);
+    $(".career__box").css("display", "flex");
     career = false;
   } else {
-    document.querySelector(".career__box").style.display = "none";
+    // document.querySelector(".career__box").style.display = "none";
     resetCr();
+    $(".career__box").fadeOut(1000);
     career = true;
   }
 }
 document.querySelector(".career").addEventListener("click", function () {
-  if (mem == 0 || career == 0 || paint == 0) {
+  if (mem == 0 || career == false || paint == 0) {
     contentsReset();
-    setTimeout(careerBox, 1000);
-  } else {
+    // setTimeout(careerBox, 1000);
+  } else if (career == true) {
     careerBox();
   }
 });
@@ -164,6 +174,8 @@ function paintDrowing() {
   }
 }
 document.querySelector(".painting").addEventListener("click", paintDrowing);
+
+
 /* WIP!!!!!!!! */
 let cross = 1;
 function btnCross() {
@@ -213,7 +225,7 @@ function openContents() {
 function contentsReset() {
   if (mem == 0) {
     memberBox();
-  } else if (career == 0) {
+  } else if (career == false) {
     careerBox();
   } else if (paint == 0) {
     paintDrowing();
