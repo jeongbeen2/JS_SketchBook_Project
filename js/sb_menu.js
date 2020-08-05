@@ -165,15 +165,25 @@ $(".cr4").on("click", cr4);
 let paint = 1;
 function paintDrowing() {
   if (paint == "1") {
-    document.querySelector(".canvas__box").style.display = "flex";
-    document.querySelector(".canvas__box").classList.add("showing__up");
+    // document.querySelector(".canvas__box").style.display = "flex";
+    // document.querySelector(".canvas__box").classList.add("showing__up");
+    $(".canvas__box").fadeIn(1000);
+    $(".canvas__box").css("display", "flex");
     paint = 0;
   } else if (paint == "0") {
-    document.querySelector(".canvas__box").style.display = "none";
+    // document.querySelector(".canvas__box").style.display = "none";
+    $(".canvas__box").fadeOut(1000);
     paint = 1;
   }
 }
-document.querySelector(".painting").addEventListener("click", paintDrowing);
+document.querySelector(".painting").addEventListener("click", function() {
+  if (mem == 0 || career == false || paint == 0) {
+    contentsReset();
+    // setTimeout(careerBox, 1000);
+  } else if (paint == 1) {
+    paintDrowing();
+  }
+});
 
 
 /* WIP!!!!!!!! */
