@@ -69,13 +69,10 @@ let career__box = $(".career__box");
 
 function careerBox() {
   if (career == true) {
-    // document.querySelector(".career__box").style.display = "flex";
-    // document.querySelector(".career__box").classList.add("showing__up");
     career__box.fadeIn(1000);
     career__box.css("display", "flex");
     career = false;
   } else {
-    // document.querySelector(".career__box").style.display = "none";
     resetCr();
     career__box.fadeOut(1000);
     career = true;
@@ -183,13 +180,10 @@ let canvas__box = $(".canvas__box");
 
 function paintDrowing() {
   if (paint == "1") {
-    // document.querySelector(".canvas__box").style.display = "flex";
-    // document.querySelector(".canvas__box").classList.add("showing__up");
     canvas__box.fadeIn(1000);
     canvas__box.css("display", "flex");
     paint = 0;
   } else if (paint == "0") {
-    // document.querySelector(".canvas__box").style.display = "none";
     canvas__box.fadeOut(1000);
     paint = 1;
   }

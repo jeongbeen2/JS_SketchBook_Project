@@ -109,11 +109,6 @@
   height: 60px;
 }
 
-/* .what-gooc {
-  display: none;
-  position: fixed;
-} */
-
 .spin {
   animation: spin 10s ease-in-out infinite;
 }

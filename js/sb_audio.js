@@ -99,15 +99,6 @@ function prevSong() {
     ktx = idx + 1;
   }
   playlist[idx].play();
-  // if (playlist[ktx].muted == false) {
-  //   playlist[idx].muted = false;
-  //   playlist[idx].volume = playlist[ktx].volume;
-  //   slider.value = playlist[idx].volume * 100;
-  // } else if (playlist[ktx].muted == true) {    
-  //   playlist[idx].volume = playlist[ktx].volume;
-  //   playlist[idx].muted = true;
-  //   slider.value = playlist[idx].volume;
-  // }
   volumeInherit();
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
@@ -141,15 +132,6 @@ function nextSong() {
     ktx = idx - 1;
   }
   playlist[idx].play();
-  // if (playlist[ktx].muted == false) {
-  //   playlist[idx].muted = false;
-  //   playlist[idx].volume = playlist[ktx].volume;
-  //   slider.value = playlist[idx].volume * 100;
-  // } else if (playlist[ktx].muted == true) {
-  //   playlist[idx].volume = playlist[ktx].volume;
-  //   playlist[idx].muted = true;
-  //   slider.value = playlist[idx].volume;
-  // }
   volumeInherit();
   if (idx == 0) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
