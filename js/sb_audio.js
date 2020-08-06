@@ -200,7 +200,8 @@ function muteAll() {
 
 
 // Click Me 누르면 play 한번 더누르면 pause
-document.querySelector(".coffin").addEventListener("click", function() {
+document.querySelector(".coffin").addEventListener("click", music);
+function music() {
   if (jja == 1) {
     pause = 1;
     playMusic();   
@@ -208,7 +209,7 @@ document.querySelector(".coffin").addEventListener("click", function() {
     pause = 0;
     playMusic();
   }
-});
+}
 
 
 // Click Me 누르면 뮤직플레이어 나타남 한번 더 누르면 사라짐

@@ -5,14 +5,10 @@
 let wht = true;
 function whatBox() {
   if (wht === true) {
-    // document.querySelector(".what-gooc").style.display = "flex";
     document.querySelector(".ico-md-1").classList.add("spin");
     document.querySelector(".ico-md-2").classList.add("swing");
-    // document.querySelector(".ico-gooc").style.display = "none";
-    // document.querySelector(".ico-gooc").classList.add("showing__up");
     wht = false;
   } else if (wht === false) {
-    // document.querySelector(".what-gooc").style.display = "none";
     document.querySelector(".ico-md-1").classList.remove("spin");
     document.querySelector(".ico-md-2").classList.remove("swing");
     document.querySelector(".ico-gooc").style.display = "flex";
@@ -226,6 +222,7 @@ function reset() {
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
   document.querySelector(".contents").classList.remove("js-contents");
+  contentsReset();
   cross = 1;
 }
 
@@ -244,9 +241,15 @@ function openContents() {
 function contentsReset() {
   if (mem == 0) {
     memberBox();
-  } else if (career == false) {
+  }
+  if (career == false) {
     careerBox();
-  } else if (paint == 0) {
+  }
+  if (paint == 0) {
     paintDrowing();
+  }
+  if (jja == 0) {
+    music();
+    jjajan();
   }
 }
