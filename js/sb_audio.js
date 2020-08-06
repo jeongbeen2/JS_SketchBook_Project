@@ -2,10 +2,11 @@
 
 
 let playlist = [];
-playlist[0] = new Audio("audio/gooddie.mp3");
-playlist[1] = new Audio("audio/christmas.mp3");
-playlist[2] = new Audio("audio/santa.mp3");
-playlist[3] = new Audio("audio/last.mp3");
+playlist[0] = new Audio("audio/automobile.mp3");
+playlist[1] = new Audio("audio/gooddie.mp3");
+playlist[2] = new Audio("audio/christmas.mp3");
+playlist[3] = new Audio("audio/santa.mp3");
+playlist[4] = new Audio("audio/last.mp3");
 
 let playBtn = document.getElementById("play-btn");
 
@@ -15,15 +16,18 @@ let idx = 0;
 let nowPlay1 = document.getElementById("now-playing1")
 let nowPlay2 = document.getElementById("now-playing2")
 if (idx == 0) {
+  nowPlay1.innerText="DJ RR - Bike Dance (Remix)";
+  nowPlay2.innerText="DJ RR - Bike Dance (Remix)";
+} else if (idx == 1) {
   nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
   nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
-} else if (idx == 1) {
+} else if (idx == 2) {
   nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
   nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
-} else if (idx == 2) {
+} else if (idx == 3) {
   nowPlay1.innerText="Ariana Grande - Santa Tell Me";
   nowPlay2.innerText="Ariana Grande - Santa Tell Me";
-} else if (idx == 3) {
+} else if (idx == 4) {
   nowPlay1.innerText="Wham - Last Christmas";
   nowPlay2.innerText="Wham - Last Christmas";
 }
@@ -101,15 +105,18 @@ function prevSong() {
   playlist[idx].play();
   volumeInherit();
   if (idx == 0) {
+    nowPlay1.innerText="DJ RR - Bike Dance (Remix)";
+    nowPlay2.innerText="DJ RR - Bike Dance (Remix)";
+  } else if (idx == 1) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
-  } else if (idx == 1) {
+  } else if (idx == 2) {
     nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
     nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
-  } else if (idx == 2) {
+  } else if (idx == 3) {
     nowPlay1.innerText="Ariana Grande - Santa Tell Me";
     nowPlay2.innerText="Ariana Grande - Santa Tell Me";
-  } else if (idx == 3) {
+  } else if (idx == 4) {
     nowPlay1.innerText="Wham - Last Christmas";
     nowPlay2.innerText="Wham - Last Christmas";
   }
@@ -134,15 +141,18 @@ function nextSong() {
   playlist[idx].play();
   volumeInherit();
   if (idx == 0) {
+    nowPlay1.innerText="DJ RR - Bike Dance (Remix)";
+    nowPlay2.innerText="DJ RR - Bike Dance (Remix)";
+  } else if (idx == 1) {
     nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
     nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
-  } else if (idx == 1) {
+  } else if (idx == 2) {
     nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
     nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
-  } else if (idx == 2) {
+  } else if (idx == 3) {
     nowPlay1.innerText="Ariana Grande - Santa Tell Me";
     nowPlay2.innerText="Ariana Grande - Santa Tell Me";
-  } else if (idx == 3) {
+  } else if (idx == 4) {
     nowPlay1.innerText="Wham - Last Christmas";
     nowPlay2.innerText="Wham - Last Christmas";
   }
@@ -234,16 +244,16 @@ document.querySelector('#song1').addEventListener("dblclick", function() {
     playlist[idx].volume = playlist[ktx].volume;
     slider.value = playlist[idx].volume * 100;
   }
-  nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
-  nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  nowPlay1.innerText="DJ RR - Bike Dance (Remix)";
+  nowPlay2.innerText="DJ RR - Bike Dance (Remix)";
 });
 document.querySelector('#song1').addEventListener("click", function() {
   document.querySelector('#song1').style.backgroundColor="#AFEEEE";
   document.querySelector('#song2').style.backgroundColor="transparent";
   document.querySelector('#song3').style.backgroundColor="transparent";
   document.querySelector('#song4').style.backgroundColor="transparent";
+  document.querySelector('#song5').style.backgroundColor="transparent";
 });
-
 
 document.querySelector('#song2').addEventListener("dblclick", function() {
   stopMusic();
@@ -260,16 +270,16 @@ document.querySelector('#song2').addEventListener("dblclick", function() {
     document.getElementById("vol").src = "css/img/vol2.png";
     playlist[idx].volume = playlist[ktx].volume;
     slider.value = playlist[idx].volume * 100;
-    playlist[idx].volume = slider.value / 100;
   }
-  nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
-  nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
-})
+  nowPlay1.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+  nowPlay2.innerText="Stephan F - Astronomia 2K19 (Radio Mix)";
+});
 document.querySelector('#song2').addEventListener("click", function() {
   document.querySelector('#song2').style.backgroundColor="#AFEEEE";
   document.querySelector('#song1').style.backgroundColor="transparent";
   document.querySelector('#song3').style.backgroundColor="transparent";
   document.querySelector('#song4').style.backgroundColor="transparent";
+  document.querySelector('#song5').style.backgroundColor="transparent";
 });
 
 
@@ -290,14 +300,15 @@ document.querySelector('#song3').addEventListener("dblclick", function() {
     slider.value = playlist[idx].volume * 100;
     playlist[idx].volume = slider.value / 100;
   }
-  nowPlay1.innerText="Ariana Grande - Santa Tell Me";
-  nowPlay2.innerText="Ariana Grande - Santa Tell Me";
+  nowPlay1.innerText="Mariah Carey - All I Want For Christmas Is You";
+  nowPlay2.innerText="Mariah Carey - All I Want For Christmas Is You";
 })
 document.querySelector('#song3').addEventListener("click", function() {
   document.querySelector('#song3').style.backgroundColor="#AFEEEE";
   document.querySelector('#song1').style.backgroundColor="transparent";
   document.querySelector('#song2').style.backgroundColor="transparent";
   document.querySelector('#song4').style.backgroundColor="transparent";
+  document.querySelector('#song5').style.backgroundColor="transparent";
 });
 
 
@@ -318,14 +329,42 @@ document.querySelector('#song4').addEventListener("dblclick", function() {
     slider.value = playlist[idx].volume * 100;
     playlist[idx].volume = slider.value / 100;
   }
-  nowPlay1.innerText="Wham - Last Christmas";
-  nowPlay2.innerText="Wham - Last Christmas";
+  nowPlay1.innerText="Ariana Grande - Santa Tell Me";
+  nowPlay2.innerText="Ariana Grande - Santa Tell Me";
 })
 document.querySelector('#song4').addEventListener("click", function() {
   document.querySelector('#song4').style.backgroundColor="#AFEEEE";
   document.querySelector('#song1').style.backgroundColor="transparent";
   document.querySelector('#song2').style.backgroundColor="transparent";
   document.querySelector('#song3').style.backgroundColor="transparent";
+  document.querySelector('#song5').style.backgroundColor="transparent";
 });
 
 
+document.querySelector('#song5').addEventListener("dblclick", function() {
+  stopMusic();
+  playlist[ktx].volume = playlist[idx].volume;
+  ktx = idx;
+  idx = 4;
+  playMusic();
+  if (playlist[ktx].muted == true) {
+    document.getElementById("vol").src = "css/img/mute2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    playlist[idx].muted = true;
+    slider.value = playlist[idx].volume;
+  } else if (playlist[idx].muted == false) {
+    document.getElementById("vol").src = "css/img/vol2.png";
+    playlist[idx].volume = playlist[ktx].volume;
+    slider.value = playlist[idx].volume * 100;
+    playlist[idx].volume = slider.value / 100;
+  }
+  nowPlay1.innerText="Wham - Last Christmas";
+  nowPlay2.innerText="Wham - Last Christmas";
+});
+document.querySelector('#song5').addEventListener("click", function() {
+  document.querySelector('#song5').style.backgroundColor="#AFEEEE";
+  document.querySelector('#song1').style.backgroundColor="transparent";
+  document.querySelector('#song2').style.backgroundColor="transparent";
+  document.querySelector('#song3').style.backgroundColor="transparent";
+  document.querySelector('#song4').style.backgroundColor="transparent";
+});
