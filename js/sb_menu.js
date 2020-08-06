@@ -24,54 +24,57 @@ document.querySelector(".what").addEventListener("click", whatBox);
 
 /* MEMBER BOX EFFECT */
 let mem = 1;
+let member__box = $(".member__box");
+let profile = $(".profile");
 
 document.querySelector(".members").addEventListener("click", function() {
   if (mem == 0 || career == false || paint == 0) {
     contentsReset();
-    // setTimeout(memberBox, 1000);
   } else if (mem == 1) {
     memberBox();
   }
 });
 function memberBox() {
   if (mem == "1") {
-    $(".member__box").fadeIn(1000);
-    $(".member__box").css("display", "flex");
-    $(".profile").animate(
+    member__box.fadeIn(1000);
+    member__box.css("display", "flex");
+    profile.animate(
       { marginLeft: "150px" },
       { duration: 1000, queue: false }
     );
-    $(".profile").animate(
+    profile.animate(
       { marginRight: "150px" },
       { duration: 1000, queue: false }
     );
     mem = 0;
   } else if (mem == "0") {
-    $(".profile").animate(
+    profile.animate(
       { marginLeft: "0px" },
       { duration: 1000, queue: false }
     );
-    $(".profile").animate(
+    profile.animate(
       { marginRight: "0px" },
       { duration: 1000, queue: false }
     );
-    $(".member__box").fadeOut(1000);
+    member__box.fadeOut(1000);
     mem = 1;
   }
 }
 // Career box
 let career = true;
+let career__box = $(".career__box");
+
 function careerBox() {
   if (career == true) {
     // document.querySelector(".career__box").style.display = "flex";
     // document.querySelector(".career__box").classList.add("showing__up");
-    $(".career__box").fadeIn(1000);
-    $(".career__box").css("display", "flex");
+    career__box.fadeIn(1000);
+    career__box.css("display", "flex");
     career = false;
   } else {
     // document.querySelector(".career__box").style.display = "none";
     resetCr();
-    $(".career__box").fadeOut(1000);
+    career__box.fadeOut(1000);
     career = true;
   }
 }
@@ -114,7 +117,8 @@ function cr1() {
     cr_1 = true;
   }
 }
-$(".cr1").on("click", cr1);
+// $(".cr1").on("click", cr1);
+document.querySelector(".cr1").addEventListener("click", cr1);
 
 function cr2() {
   cr_1 = true;
@@ -129,7 +133,8 @@ function cr2() {
     cr_2 = true;
   }
 }
-$(".cr2").on("click", cr2);
+// $(".cr2").on("click", cr2);
+document.querySelector(".cr2").addEventListener("click", cr2);
 
 function cr3() {
   cr_2 = true;
@@ -144,7 +149,8 @@ function cr3() {
     cr_3 = true;
   }
 }
-$(".cr3").on("click", cr3);
+// $(".cr3").on("click", cr3);
+document.querySelector(".cr3").addEventListener("click", cr3);
 
 function cr4() {
   cr_2 = true;
@@ -159,20 +165,23 @@ function cr4() {
     cr_4 = true;
   }
 }
-$(".cr4").on("click", cr4);
+// $(".cr4").on("click", cr4);
+document.querySelector(".cr4").addEventListener("click", cr4);
 
 /* PAINTING EFFECT */
 let paint = 1;
+let canvas__box = $(".canvas__box");
+
 function paintDrowing() {
   if (paint == "1") {
     // document.querySelector(".canvas__box").style.display = "flex";
     // document.querySelector(".canvas__box").classList.add("showing__up");
-    $(".canvas__box").fadeIn(1000);
-    $(".canvas__box").css("display", "flex");
+    canvas__box.fadeIn(1000);
+    canvas__box.css("display", "flex");
     paint = 0;
   } else if (paint == "0") {
     // document.querySelector(".canvas__box").style.display = "none";
-    $(".canvas__box").fadeOut(1000);
+    canvas__box.fadeOut(1000);
     paint = 1;
   }
 }
