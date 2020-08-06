@@ -1,0 +1,62 @@
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes showingUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showingDown {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes AnmenuUp {
+  0% {
+    color: transparent;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(10800deg);
+  }
+}
+@keyframes swing {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}

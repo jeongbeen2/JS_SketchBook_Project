@@ -9,7 +9,7 @@ function naviBar() {
     $(".hide-clock").addClass("change");
     $(".titleName").addClass("js-scroll-titleName");
     $(".menu__btn").addClass("js-scroll-menu__btn");
-    $(".js-menu").addClass("js-scroll-menu");
+    $(".menu").addClass("js-scroll-menu");
     $(".xbox").addClass("js-scroll-xbox");
     $(".music").addClass("js-scroll-music");
   } else {
@@ -20,9 +20,22 @@ function naviBar() {
     $(".hide-clock").removeClass("change");
     $(".titleName").removeClass("js-scroll-titleName");
     $(".menu__btn").removeClass("js-scroll-menu__btn");
-    $(".js-menu").removeClass("js-scroll-menu");
+    $(".menu").removeClass("js-scroll-menu");
     $(".xbox").removeClass("js-scroll-xbox");
     $(".music").removeClass("js-scroll-music");
   }
 }
 naviBar();
+
+$(window).on('scroll', function() {
+  let windowBottom = $(window).scrollTop() + $(window).height();
+  if (windowBottom >= $(document).height() - 100) {
+    $('.to-top-btn').fadeIn(500);
+  } else {
+    $('.to-top-btn').fadeOut(500);
+  }
+});
+
+$('.to-top-btn').on('click', function() {
+  $('html, body').animate({scrollTop: 0}, 500);
+});

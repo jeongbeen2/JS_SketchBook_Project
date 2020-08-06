@@ -2,62 +2,190 @@
 
 /* What's BOX EFFECT */
 
-let wht = 1;
-function whatBox(){
-  if (wht == "1"){
-    document.querySelector(".what-gooc").style.display = "flex";
-    // document.querySelector(".ico-gooc").style.opacity = 0;
-    document.querySelector(".ico-gooc").style.display = "none";
-    document.querySelector(".what-gooc").classList.add("showing__up");
-    wht = 0;
-  } else if(wht == "0"){
-    document.querySelector(".what-gooc").style.display = "none";
-    // document.querySelector(".ico-gooc").style.opacity = 1;
+let wht = true;
+function whatBox() {
+  if (wht === true) {
+    // document.querySelector(".what-gooc").style.display = "flex";
+    document.querySelector(".ico-md-1").classList.add("spin");
+    document.querySelector(".ico-md-2").classList.add("swing");
+    // document.querySelector(".ico-gooc").style.display = "none";
+    // document.querySelector(".ico-gooc").classList.add("showing__up");
+    wht = false;
+  } else if (wht === false) {
+    // document.querySelector(".what-gooc").style.display = "none";
+    document.querySelector(".ico-md-1").classList.remove("spin");
+    document.querySelector(".ico-md-2").classList.remove("swing");
     document.querySelector(".ico-gooc").style.display = "flex";
     document.querySelector(".ico-gooc").classList.add("showing__up");
-    wht = 1;
+    wht = true;
   }
 }
 document.querySelector(".what").addEventListener("click", whatBox);
 
-
-
-
-
-
-
-
-
 /* MEMBER BOX EFFECT */
 let mem = 1;
+
+document.querySelector(".members").addEventListener("click", function() {
+  if (mem == 0 || career == false || paint == 0) {
+    contentsReset();
+    // setTimeout(memberBox, 1000);
+  } else if (mem == 1) {
+    memberBox();
+  }
+});
 function memberBox() {
   if (mem == "1") {
-    document.querySelector(".member__box").style.display = "flex";
-    document.querySelector(".member__box").classList.add("showing__up");
+    $(".member__box").fadeIn(1000);
+    $(".member__box").css("display", "flex");
+    $(".profile").animate(
+      { marginLeft: "150px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "150px" },
+      { duration: 1000, queue: false }
+    );
     mem = 0;
   } else if (mem == "0") {
-    document.querySelector(".member__box").style.display = "none";
+    $(".profile").animate(
+      { marginLeft: "0px" },
+      { duration: 1000, queue: false }
+    );
+    $(".profile").animate(
+      { marginRight: "0px" },
+      { duration: 1000, queue: false }
+    );
+    $(".member__box").fadeOut(1000);
     mem = 1;
   }
 }
-document.querySelector(".members").addEventListener("click", memberBox);
-
-document.querySelector(".what").addEventListener("click", function () {
-  document.querySelector(".ico-gooc__column").classList.toggle("move");
+// Career box
+let career = true;
+function careerBox() {
+  if (career == true) {
+    // document.querySelector(".career__box").style.display = "flex";
+    // document.querySelector(".career__box").classList.add("showing__up");
+    $(".career__box").fadeIn(1000);
+    $(".career__box").css("display", "flex");
+    career = false;
+  } else {
+    // document.querySelector(".career__box").style.display = "none";
+    resetCr();
+    $(".career__box").fadeOut(1000);
+    career = true;
+  }
+}
+document.querySelector(".career").addEventListener("click", function () {
+  if (mem == 0 || career == false || paint == 0) {
+    contentsReset();
+    // setTimeout(careerBox, 1000);
+  } else if (career == true) {
+    careerBox();
+  }
 });
 
+function resetCr() {
+  document.querySelector(".cr__img1").style.display = "none";
+  document.querySelector(".cr__img2").style.display = "none";
+  document.querySelector(".cr__img3").style.display = "none";
+  document.querySelector(".cr__img4").style.display = "none";
+}
+
+// JQuery 입성! 이걸외않써!
+let cr_1 = true;
+let cr_2 = true;
+let cr_3 = true;
+let cr_4 = true;
+let cr__img1 = $(".cr__img1");
+let cr__img2 = $(".cr__img2");
+let cr__img3 = $(".cr__img3");
+let cr__img4 = $(".cr__img4");
+
+function cr1() {
+  cr_2 = true;
+  cr_3 = true;
+  cr_4 = true;
+  if (cr_1 == true) {
+    resetCr();
+    cr__img1.fadeIn(1000);
+    cr_1 = false;
+  } else {
+    cr__img1.fadeOut(1000);
+    cr_1 = true;
+  }
+}
+$(".cr1").on("click", cr1);
+
+function cr2() {
+  cr_1 = true;
+  cr_3 = true;
+  cr_4 = true;
+  if (cr_2 == true) {
+    resetCr();
+    cr__img2.fadeIn(1000);
+    cr_2 = false;
+  } else {
+    cr__img2.fadeOut(1000);
+    cr_2 = true;
+  }
+}
+$(".cr2").on("click", cr2);
+
+function cr3() {
+  cr_2 = true;
+  cr_1 = true;
+  cr_4 = true;
+  if (cr_3 == true) {
+    resetCr();
+    cr__img3.fadeIn(1000);
+    cr_3 = false;
+  } else {
+    cr__img3.fadeOut(1000);
+    cr_3 = true;
+  }
+}
+$(".cr3").on("click", cr3);
+
+function cr4() {
+  cr_2 = true;
+  cr_3 = true;
+  cr_1 = true;
+  if (cr_4 == true) {
+    resetCr();
+    cr__img4.fadeIn(1000);
+    cr_4 = false;
+  } else {
+    cr__img4.fadeOut(1000);
+    cr_4 = true;
+  }
+}
+$(".cr4").on("click", cr4);
+
+/* PAINTING EFFECT */
 let paint = 1;
 function paintDrowing() {
   if (paint == "1") {
-    document.querySelector(".canvas__box").style.display = "flex";
-    document.querySelector(".canvas__box").classList.add("showing__up");
+    // document.querySelector(".canvas__box").style.display = "flex";
+    // document.querySelector(".canvas__box").classList.add("showing__up");
+    $(".canvas__box").fadeIn(1000);
+    $(".canvas__box").css("display", "flex");
     paint = 0;
   } else if (paint == "0") {
-    document.querySelector(".canvas__box").style.display = "none";
+    // document.querySelector(".canvas__box").style.display = "none";
+    $(".canvas__box").fadeOut(1000);
     paint = 1;
   }
 }
-document.querySelector(".painting").addEventListener("click", paintDrowing);
+document.querySelector(".painting").addEventListener("click", function() {
+  if (mem == 0 || career == false || paint == 0) {
+    contentsReset();
+    // setTimeout(careerBox, 1000);
+  } else if (paint == 1) {
+    paintDrowing();
+  }
+});
+
+
 /* WIP!!!!!!!! */
 let cross = 1;
 function btnCross() {
@@ -88,16 +216,28 @@ function reset() {
   document.querySelector(".ico-md-1").classList.remove("js-ico-md");
   document.querySelector(".ico-md-2").classList.remove("js-ico-md");
   document.querySelector(".titleName").classList.remove("js-titleName");
-  // document.querySelector(".member__box").classList.remove("active");
-  // document.querySelector(".member__box").style.display = "none";
-  // document.querySelector(".canvas__box").style.display = "none";
+  document.querySelector(".contents").classList.remove("js-contents");
   cross = 1;
 }
 
-function menuReset(){
+function menuReset() {
   document.querySelector(".what__Box").style.display = "none";
   document.querySelector(".member__box").style.display = "none";
   document.querySelector(".carrer__Box").style.display = "none";
   document.querySelector(".canvas__box").style.display = "none";
 }
 
+function openContents() {
+  var element = document.querySelector(".contents");
+  element.classList.add("js-contents");
+}
+
+function contentsReset() {
+  if (mem == 0) {
+    memberBox();
+  } else if (career == false) {
+    careerBox();
+  } else if (paint == 0) {
+    paintDrowing();
+  }
+}

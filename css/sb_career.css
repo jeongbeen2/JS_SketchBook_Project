@@ -1,0 +1,43 @@
+.career__box {
+  display: none;
+  flex-direction: column;
+}
+.carrer__span {
+  display: flex;
+  flex-direction: column;
+}
+
+.career__box span {
+  color: white;
+  font-family: "Recursive", sans-serif;
+  font-size: 30px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.cr1 {
+  animation: AnmenuUp 1s ease-in-out;
+}
+.cr2 {
+  animation: AnmenuUp 1.2s ease-in-out;
+}
+.cr3 {
+  animation: AnmenuUp 1.4s ease-in-out;
+}
+.cr4 {
+  animation: AnmenuUp 1.6s ease-in-out;
+}
+
+.carrer__column img {
+  width: 600px;
+  height: 450px;
+  display: none;
+  border-radius: 10px;
+}
+
+.carrer__column {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
