@@ -24,8 +24,15 @@ let member__box = $(".member__box");
 let profile = $(".profile");
 
 document.querySelector(".members").addEventListener("click", function() {
-  if (mem == 0 || career == false || paint == 0) {
-    contentsReset();
+  if (mem == 0 || career == false || paint == 0 || jja == 0) {
+    if (career == false || paint == 0 || jja == 0) {
+      contentsReset();
+    }
+    if (mem == 1) {
+      setTimeout(memberBox, 1000);
+    } else {
+      memberBox();
+    }
   } else if (mem == 1) {
     memberBox();
   }
@@ -75,9 +82,15 @@ function careerBox() {
   }
 }
 document.querySelector(".career").addEventListener("click", function () {
-  if (mem == 0 || career == false || paint == 0) {
-    contentsReset();
-    // setTimeout(careerBox, 1000);
+  if (mem == 0 || career == false || paint == 0 || jja == 0) {
+    if (mem == 0 || paint == 0 || jja == 0) {
+      contentsReset();
+    }
+    if (career == true) {
+      setTimeout(careerBox, 1000);
+    } else {
+      careerBox();
+    }
   } else if (career == true) {
     careerBox();
   }
@@ -182,9 +195,15 @@ function paintDrowing() {
   }
 }
 document.querySelector(".painting").addEventListener("click", function() {
-  if (mem == 0 || career == false || paint == 0) {
-    contentsReset();
-    // setTimeout(careerBox, 1000);
+  if (mem == 0 || career == false || paint == 0 || jja == 0) {
+    if (career == false || mem == 0 || jja == 0) {
+      contentsReset();
+    }
+    if (paint == 1) {
+      setTimeout(paintDrowing, 1000);
+    } else {
+      paintDrowing();
+    }
   } else if (paint == 1) {
     paintDrowing();
   }
