@@ -182,6 +182,9 @@
 .coffin {
   animation: AnmenuUp 1.8s ease-in-out;
 }
+.calendar {
+  animation: AnmenuUp 2s ease-in-out;
+}
 
 .menu__btn:hover {
   color: rgb(253, 186, 61);

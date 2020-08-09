@@ -23,7 +23,7 @@ let mem = 1;
 let member__box = $(".member__box");
 let profile = $(".profile");
 
-document.querySelector(".members").addEventListener("click", function() {
+document.querySelector(".members").addEventListener("click", function () {
   if (mem == 0 || career == false || paint == 0) {
     if (career == false || paint == 0) {
       contentsReset();
@@ -41,24 +41,12 @@ function memberBox() {
   if (mem == "1") {
     member__box.fadeIn(1000);
     member__box.css("display", "flex");
-    profile.animate(
-      { marginLeft: "150px" },
-      { duration: 1000, queue: false }
-    );
-    profile.animate(
-      { marginRight: "150px" },
-      { duration: 1000, queue: false }
-    );
+    profile.animate({marginLeft: "150px"}, {duration: 1000, queue: false});
+    profile.animate({marginRight: "150px"}, {duration: 1000, queue: false});
     mem = 0;
   } else if (mem == "0") {
-    profile.animate(
-      { marginLeft: "0px" },
-      { duration: 1000, queue: false }
-    );
-    profile.animate(
-      { marginRight: "0px" },
-      { duration: 1000, queue: false }
-    );
+    profile.animate({marginLeft: "0px"}, {duration: 1000, queue: false});
+    profile.animate({marginRight: "0px"}, {duration: 1000, queue: false});
     member__box.fadeOut(1000);
     mem = 1;
   }
@@ -188,7 +176,7 @@ function paintDrowing() {
     paint = 1;
   }
 }
-document.querySelector(".painting").addEventListener("click", function() {
+document.querySelector(".painting").addEventListener("click", function () {
   if (mem == 0 || career == false || paint == 0) {
     if (career == false || mem == 0) {
       contentsReset();
@@ -202,7 +190,6 @@ document.querySelector(".painting").addEventListener("click", function() {
     paintDrowing();
   }
 });
-
 
 /* WIP!!!!!!!! */
 let cross = 1;
@@ -244,6 +231,7 @@ function menuReset() {
   document.querySelector(".member__box").style.display = "none";
   document.querySelector(".carrer__Box").style.display = "none";
   document.querySelector(".canvas__box").style.display = "none";
+  document.querySelector(".calendar__box").style.display = "none";
 }
 
 function openContents() {
