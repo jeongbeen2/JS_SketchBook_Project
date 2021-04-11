@@ -19,4 +19,3 @@ Sketchbook on Vanilla JS
 
 [jeongbeen2](https://github.com/jeongbeen2)
 [yoonsangkwak](https://github.com/yoonsangkwak)
-[DongHu Kim](https://github.com/GooCdhkim)
